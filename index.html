@@ -1,70 +1,1243 @@
- <!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gold Car Expresso</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Rota Certa Global Pro</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,system-ui;background:#030712;color:#f8fafc}button,input,select,textarea{font:inherit}.page,.auth{width:min(100%,720px);margin:auto;padding:16px}.auth{min-height:100vh;display:grid;place-items:center}.card{background:#111827;border:1px solid #334155;border-radius:22px;padding:16px;margin:12px 0}.hero{text-align:center}.logo{width:92px;height:92px;border-radius:30px;margin:auto;display:grid;place-items:center;background:linear-gradient(135deg,#facc15,#fb923c);font-size:46px}.benefits{display:grid;gap:8px;margin:20px 0;text-align:left}.benefits span{background:#030712;border-radius:14px;padding:10px}.muted,small{color:#94a3b8}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.stat{background:#030712;border:1px solid #334155;border-radius:16px;padding:12px}.stat b{display:block;font-size:22px}.row,.topbar{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}.primary,.secondary,.small,.danger,.done{border:0;border-radius:14px;min-height:44px;padding:11px 14px;cursor:pointer}.primary{width:100%;background:#facc15;color:#111827;font-weight:900;margin-top:8px}.secondary{width:100%;background:#1f2937;color:#fff;margin-top:8px}.small{background:#334155;color:#fff}.danger{background:#7f1d1d;color:#fff}.done{background:#16a34a;color:#fff}.warning{border-color:#ef4444;background:#450a0a}.ok{border-color:#22c55e;background:#052e16}input,select,textarea{width:100%;background:#020617;color:#fff;border:1px solid #475569;border-radius:14px;padding:12px;margin:6px 0}.tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.tabs button{background:#1f2937;color:#fff;border:0;border-radius:12px;padding:10px}.tabs .active{background:#facc15;color:#111827;font-weight:900}.item{display:flex;justify-content:space-between;gap:8px;align-items:center;background:#030712;border:1px solid #334155;border-radius:14px;padding:12px;margin:8px 0}.cargo{position:relative;overflow:hidden;border-radius:18px;border:1px solid #334155;margin-top:10px;min-height:260px;background:#020617}.cargo img{width:100%;min-height:260px;object-fit:cover;display:block}.pin{position:absolute;transform:translate(-50%,-50%);border:2px solid #111827;background:#facc15;color:#111827;border-radius:999px;padding:7px;font-weight:900}.mark{position:absolute;inset:0;border:2px dashed #facc15;background:#0001;color:#fff;display:flex;align-items:end;justify-content:center;padding:12px;font-weight:900}.file input{display:none}.file{display:block;text-align:center;background:#1f2937;border-radius:14px;padding:13px;margin:8px 0}.routeBox{background:#030712;border:1px solid #334155;border-radius:14px;padding:12px;margin:8px 0}.photo{width:78px;height:78px;object-fit:cover;border-radius:12px;border:1px solid #334155}.badge{display:inline-block;border-radius:999px;padding:4px 8px;background:#334155;color:#fff;margin:2px}.firebaseBox{border:1px dashed #22c55e;background:#052e16}.error{border:1px solid #ef4444;background:#450a0a}.code{font-size:24px;letter-spacing:2px;color:#facc15;font-weight:900}.avatar{width:64px;height:64px;border-radius:999px;border:2px solid #facc15;object-fit:cover}.ocrbox{border:1px dashed #facc15;background:#0f172a}.progress{height:16px;background:#020617;border:1px solid #334155;border-radius:999px;overflow:hidden}.progress b{display:block;height:100%;background:#facc15}.modal{position:fixed;inset:0;background:#000c;z-index:99;display:grid;place-items:center;padding:16px}.modal img{max-width:96vw;max-height:88vh;border-radius:18px;border:1px solid #334155}.navbtn{background:#2563eb;color:white;border:0;border-radius:14px;min-height:44px;padding:11px 14px;cursor:pointer;margin:4px}.next{border:2px solid #facc15;box-shadow:0 0 0 2px #facc1533}.chip{display:inline-block;background:#020617;border:1px solid #334155;border-radius:999px;padding:6px 10px;margin:3px}.routeActions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.review{border:1px solid #22c55e;background:#052e16}.fieldok{border-color:#22c55e}.fieldbad{border-color:#ef4444}.hint{font-size:12px;color:#facc15}.score{height:8px;background:#020617;border-radius:999px;overflow:hidden;border:1px solid #334155}.score b{display:block;height:100%;background:#22c55e}.voicebox{border:1px solid #38bdf8;background:#082f49}.voicebtn{background:#0284c7;color:white;border:0;border-radius:14px;min-height:44px;padding:11px 14px;cursor:pointer;margin-top:8px;width:100%}.note{border-left:4px solid #facc15;padding-left:10px}.loadbox{border:1px solid #a855f7;background:#2e1065}.queueItem{background:#020617;border:1px solid #334155;border-radius:14px;padding:10px;margin:8px 0}.queueItem img{width:70px;height:70px;object-fit:cover;border-radius:10px}.minirow{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}.batchbar{height:14px;background:#020617;border:1px solid #334155;border-radius:999px;overflow:hidden;margin:10px 0}.batchbar b{display:block;height:100%;background:#a855f7}.statusok{color:#22c55e;font-weight:700}.statuswarn{color:#facc15;font-weight:700}.statuserr{color:#ef4444;font-weight:700}.newsbox{border:1px solid #facc15;background:#1f2937}.badge{display:inline-block;background:#facc15;color:#111827;border-radius:999px;padding:4px 9px;font-weight:800;font-size:12px;margin-bottom:8px}.guide{border:2px dashed #facc15;border-radius:16px;padding:12px;text-align:center;color:#facc15;background:#111827;margin:8px 0}.cargoGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.cargoBox{background:#020617;border:1px solid #334155;border-radius:14px;padding:10px}.cargoBox b{color:#facc15}.cargoList{font-size:13px;color:#cbd5e1;line-height:1.5}.cargoHint{background:#052e16;border:1px solid #22c55e;border-radius:12px;padding:10px;color:#dcfce7;margin-top:8px}.betaPanel{border:1px solid #facc15;background:#111827}.testItem{background:#020617;border:1px solid #334155;border-radius:12px;padding:9px;margin:6px 0;color:#e5e7eb}.feedbackBtns{display:grid;grid-template-columns:1fr 1fr;gap:8px}.betaBadge{display:inline-block;background:#facc15;color:#111827;border-radius:999px;padding:4px 9px;font-weight:900;font-size:12px}.autoLoad{border:1px solid #facc15;background:#111827}.autoGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.autoCard{background:#020617;border:1px solid #334155;border-radius:14px;padding:10px}.autoCard b{color:#facc15}.autoMini{font-size:12px;color:#cbd5e1;line-height:1.45}.autoWarn{border:1px solid #22c55e;background:#052e16;color:#dcfce7;border-radius:12px;padding:10px;margin:8px 0}.autoBtn{background:#facc15;color:#111827;font-weight:900}.routeAI{border:1px solid #38bdf8;background:#082f49}.routeList{background:#020617;border:1px solid #334155;border-radius:14px;padding:10px;margin:8px 0}.routeStep{display:flex;gap:10px;align-items:flex-start;border-bottom:1px solid #1f2937;padding:8px 0}.routeStep:last-child{border-bottom:0}.routeNum{background:#facc15;color:#111827;font-weight:900;border-radius:999px;width:28px;height:28px;display:grid;place-items:center;flex:0 0 28px}.routeText b{color:#facc15}.routeStats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.routeStats div{background:#020617;border:1px solid #334155;border-radius:12px;padding:9px;text-align:center}.routeStats b{display:block;color:#facc15;font-size:18px}.finderBox{border:1px solid #38bdf8;background:#082f49}.resultCard{background:#020617;border:1px solid #334155;border-radius:14px;padding:12px;margin:8px 0}.priority{display:inline-block;border-radius:999px;padding:4px 8px;font-size:12px;font-weight:800}.pHigh{background:#14532d;color:#dcfce7}.pMid{background:#713f12;color:#fef3c7}.pLow{background:#7f1d1d;color:#fee2e2}.finderPhoto{width:92px;height:92px;object-fit:cover;border-radius:12px;border:1px solid #facc15}.finderActions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.bigcode{font-size:18px;color:#facc15;font-weight:900}.mapaCarga{border:1px solid #a855f7;background:#2e1065}.vehicleGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.slot{background:#020617;border:1px solid #475569;border-radius:12px;padding:10px;min-height:72px;text-align:center}.slot b{color:#facc15}.slot small{display:block;color:#cbd5e1;margin-top:4px}.slot.next{border-color:#22c55e;box-shadow:0 0 0 2px rgba(34,197,94,.35)}.slot.empty{opacity:.45}.vehicleLegend{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:10px}.legendItem{background:#111827;border:1px solid #334155;border-radius:12px;padding:8px;font-size:13px}.cropPreview{max-width:120px;max-height:90px;border-radius:10px;border:1px solid #facc15;margin-top:6px}.queueGrid{display:grid;gap:8px}.queueTools{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}@media(max-width:520px){.stats{grid-template-columns:1fr}.tabs{grid-template-columns:repeat(2,1fr)}.item{align-items:flex-start;flex-direction:column}.page,.auth{padding:10px}}
+.premiumBox{border:1px solid #facc15;background:#111827;box-shadow:0 0 14px rgba(250,204,21,.25)}.pixBox{background:#020617;border:1px dashed #facc15;border-radius:12px;padding:10px;word-break:break-all;font-size:12px;color:#fde68a}.accountGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.accountItem{background:#020617;border:1px solid #334155;border-radius:12px;padding:10px}.accountItem b{color:#facc15;font-size:18px;display:block}.countdown{border:1px solid #38bdf8;background:#082f49;border-radius:14px;padding:12px;margin:8px 0;color:#e0f2fe}.neonGlow{box-shadow:0 0 18px rgba(56,189,248,.65),inset 0 0 12px rgba(56,189,248,.18);border:1px solid #38bdf8}.smartMap{border:1px solid #38bdf8;background:#061826;box-shadow:0 0 16px rgba(56,189,248,.25)}
+.vehicleTop{background:#020617;border:1px solid #334155;border-radius:18px;padding:12px}
+.vehicleCab{height:48px;border:1px solid #38bdf8;border-radius:16px 16px 8px 8px;display:grid;place-items:center;color:#38bdf8;margin-bottom:8px}
+.vehicleBody{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.loadLane{background:#0f172a;border:1px solid #334155;border-radius:14px;min-height:160px;padding:8px}
+.loadLane h4{margin:0 0 8px;color:#facc15;text-align:center}
+.loadPkg{background:#020617;border:1px solid #475569;border-radius:10px;padding:7px;margin:6px 0;font-size:12px}
+.loadPkg.next{border-color:#22c55e;box-shadow:0 0 0 2px rgba(34,197,94,.25)}
+.loadPkg b{color:#facc15}
+.smartActions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.smartStats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0}
+.smartStats div{background:#020617;border:1px solid #334155;border-radius:12px;padding:8px;text-align:center}
+.smartStats b{display:block;color:#facc15;font-size:17px}
+.accountPro{border:1px solid #38bdf8;background:linear-gradient(180deg,#061826,#020617);box-shadow:0 0 18px rgba(56,189,248,.28)}
+.accountHeader{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+.avatarPro{width:58px;height:58px;border-radius:50%;border:2px solid #38bdf8;box-shadow:0 0 12px rgba(56,189,248,.65);display:grid;place-items:center;background:#0f172a;font-size:26px}
+.badgePremium{display:inline-block;background:#facc15;color:#111827;border-radius:999px;padding:4px 10px;font-weight:900;font-size:12px}
+.accountRows{display:grid;gap:8px}
+.accountRow{display:flex;justify-content:space-between;align-items:center;background:#020617;border:1px solid #334155;border-radius:12px;padding:10px}
+.accountRow b{color:#facc15}
+.supportBox{border:1px solid #22c55e;background:#052e16;border-radius:12px;padding:10px;color:#dcfce7;margin-top:10px}
+
+.socialPanel{border:1px solid #38bdf8;background:#061826;box-shadow:0 0 16px rgba(56,189,248,.22)}
+.socialGrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.socialBtn{background:#020617;border:1px solid #334155;border-radius:12px;padding:10px;text-align:center}
+.socialBtn b{color:#facc15}
+.configPanel{border:1px solid #facc15;background:#111827}
+.configPanel input{width:100%;box-sizing:border-box;margin:5px 0 10px}
+.configMini{background:#020617;border:1px solid #334155;border-radius:12px;padding:10px;margin:8px 0}
+</style>
+
+<script>
+window.addEventListener('error',function(e){
+ document.body.innerHTML='<div style="font-family:Arial;background:#030712;color:white;min-height:100vh;padding:20px"><h2>Rota Certa - erro detectado</h2><p>O aplicativo encontrou um erro ao abrir.</p><pre style="white-space:pre-wrap;background:#111827;padding:12px;border-radius:12px;color:#facc15">'+String(e.message||e.error||'erro desconhecido')+'</pre><p>Envie este print para correção.</p></div>';
+});
+window.addEventListener('unhandledrejection',function(e){
+ document.body.innerHTML='<div style="font-family:Arial;background:#030712;color:white;min-height:100vh;padding:20px"><h2>Rota Certa - erro detectado</h2><p>Falha ao carregar dados.</p><pre style="white-space:pre-wrap;background:#111827;padding:12px;border-radius:12px;color:#facc15">'+String((e.reason&&e.reason.message)||e.reason||'erro desconhecido')+'</pre><p>Envie este print para correção.</p></div>';
+});
+</script>
+
 </head>
 <body>
-    <header>
-        <h1>Gold Car Expresso</h1>
-        <nav>
-            <a href="#servicos">Serviços</a>
-            <a href="#agendamento">Agendamento</a>
-            <a href="#orcamento">Orçamento</a>
-            <a href="#contato">Contato</a>
-        </nav>
-    </header>
+<div id="app"></div>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signInWithRedirect, getRedirectResult, signInAnonymously, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+import { getFirestore, doc, setDoc, getDoc, collection, addDoc, updateDoc, deleteDoc, query, where, onSnapshot, serverTimestamp, increment, getDocs, limit } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
 
-    <main>
-        <section id="inicio">
-            <h2>Bem-vindo!</h2>
-            <p>Especialistas em lanternagem, pintura e estética automotiva.</p>
-        </section>
+const firebaseConfig={apiKey:"AIzaSyD24ScbNCdNmbm5r7z4LrDkjv0ibPCnEqg",authDomain:"rota-certa-app-29724.firebaseapp.com",projectId:"rota-certa-app-29724",storageBucket:"rota-certa-app-29724.firebasestorage.app",messagingSenderId:"361599281626",appId:"1:361599281626:web:16b19097f7cd991cb1f8e3"};
+const appFb=initializeApp(firebaseConfig), auth=getAuth(appFb), db=getFirestore(appFb), provider=new GoogleAuthProvider();
 
-        <section id="servicos">
-            <h2>Serviços</h2>
-            <ul>
-                <li>Lanternagem</li>
-                <li>Pintura</li>
-                <li>Polimento</li>
-                <li>Funilaria</li>
-                <li>Retoques rápidos</li>
-            </ul>
-        </section>
+const STORE='rota-certa-global-pro-v124', TRIAL=3, PREMIUM=31, BONUS=120, NEW_USER_BONUS=20, LIMIT=160;
+let unsubPacks=null, unsubInvites=null, firebaseError="";
+let state=load()||{user:null,packs:[],invites:[],cargo:null,tab:'pacotes',ocr:'',query:'',syncLog:[]};
 
-        <section id="agendamento">
-            <h2>Agende seu serviço</h2>
-            <form>
-                <input type="text" placeholder="Seu nome" required>
-                <input type="text" placeholder="Modelo do veículo" required>
-                <input type="date" required>
-                <button type="submit">Agendar</button>
-            </form>
-        </section>
+function load(){try{return JSON.parse(localStorage.getItem(STORE))}catch(e){return null}}
+function save(){localStorage.setItem(STORE,JSON.stringify(state))}
+function logSync(m){state.syncLog.unshift(new Date().toLocaleString('pt-BR')+' - '+m);state.syncLog=state.syncLog.slice(0,10);save()}
+function price(){return (navigator.language||'pt-BR').includes('BR')?'R$ 30,00':'US$ 5.99'}
+function left(d){return Math.max(0,Math.ceil((new Date(d)-new Date())/86400000)||0)}
+function makeCode(){return('RC'+Math.random().toString(36).slice(2,8)).toUpperCase()}
+function safe(s){return String(s||'').replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]))}
+function inviteParam(){return new URLSearchParams(location.search).get('ref')||''}
 
-        <section id="orcamento">
-            <h2>Solicite um orçamento</h2>
-            <form>
-                <input type="text" placeholder="Seu nome" required>
-                <input type="text" placeholder="Modelo do veículo" required>
-                <input type="file" accept="image/*" multiple>
-                <textarea placeholder="Descreva o serviço desejado"></textarea>
-                <button type="submit">Enviar orçamento</button>
-            </form>
-        </section>
+async function enterGoogle(){try{firebaseError='';await signInWithPopup(auth,provider)}catch(e){firebaseError=e.message||String(e);try{await signInWithRedirect(auth,provider)}catch(err){firebaseError=err.message||String(err);render()}}}
+async function enterAnon(){try{firebaseError='';await signInAnonymously(auth)}catch(e){firebaseError=e.message||String(e);render();alert(firebaseError)}}
+async function exit(){try{if(unsubPacks)unsubPacks();if(unsubInvites)unsubInvites();await signOut(auth)}catch(e){}state.user=null;state.packs=[];state.invites=[];save();render()}
+async function saveReferralIndexes(uid, code){code=String(code||'').toUpperCase();await setDoc(doc(db,'refCodes',code),{uid,code,createdAt:serverTimestamp()},{merge:true});await setDoc(doc(db,'usersByReferralCode',code),{uid,code,createdAt:serverTimestamp()},{merge:true})}
+async function ensureUser(u){let d=new Date();d.setDate(d.getDate()+TRIAL);const userRef=doc(db,'users',u.uid), snap=await getDoc(userRef);if(!snap.exists()){const code=makeCode();const data={id:u.uid,uid:u.uid,name:u.displayName||(u.isAnonymous?'Entregador':'Usuário Google'),email:u.email||'visitante@rotacerta.app',photoURL:u.photoURL||'',login:u.isAnonymous?'visitante':'google',plan:'trial',premiumUntil:d.toISOString(),bonus:0,refCode:code,referralCode:code,referralUsed:false,referralCount:0,createdAt:serverTimestamp()};await setDoc(userRef,data,{merge:true});await saveReferralIndexes(u.uid,code);return data}const data={id:u.uid,...snap.data()};let code=(data.referralCode||data.refCode||'').toUpperCase();if(!code){code=makeCode();await setDoc(userRef,{refCode:code,referralCode:code},{merge:true})}if(!data.referralCode||!data.refCode){await setDoc(userRef,{refCode:code,referralCode:code},{merge:true})}await saveReferralIndexes(u.uid,code);data.refCode=code;data.referralCode=code;return data}
+async function findOwnerByCode(code){code=String(code||'').trim().toUpperCase();let snap=await getDoc(doc(db,'refCodes',code));if(snap.exists())return snap.data().uid;snap=await getDoc(doc(db,'usersByReferralCode',code));if(snap.exists())return snap.data().uid;const q1=query(collection(db,'users'),where('referralCode','==',code),limit(1));const r1=await getDocs(q1);if(!r1.empty)return r1.docs[0].id;const q2=query(collection(db,'users'),where('refCode','==',code),limit(1));const r2=await getDocs(q2);if(!r2.empty)return r2.docs[0].id;return null}
+async function applyInvite(code){code=String(code||'').trim().toUpperCase();if(!code||!state.user)return;if(state.user.referralUsed)return alert('Você já usou um código.');if(code===String(state.user.refCode).toUpperCase())return alert('Você não pode usar o próprio código.');const inviterUid=await findOwnerByCode(code);if(!inviterUid)return alert('Código não encontrado.');if(inviterUid===state.user.id)return alert('Você não pode usar o próprio código.');const inviteId=state.user.id+'_'+code;const inviteRef=doc(db,'invites',inviteId);const inviteSnap=await getDoc(inviteRef);if(inviteSnap.exists())return alert('Convite já usado nesta conta.');await setDoc(inviteRef,{id:inviteId,code,inviterUid,newUserUid:state.user.id,newUserEmail:state.user.email,bonusInviter:BONUS,bonusNewUser:NEW_USER_BONUS,createdAt:serverTimestamp()});await setDoc(doc(db,'users',inviterUid),{bonus:increment(BONUS),referralCount:increment(1)},{merge:true});state.user.bonus=Number(state.user.bonus||0)+NEW_USER_BONUS;state.user.referralUsed=true;state.user.usedRefCode=code;await setDoc(doc(db,'users',state.user.id),{bonus:state.user.bonus,referralUsed:true,usedRefCode:code},{merge:true});logSync('Convite aplicado: '+code);save();render();alert('Convite aplicado! Você ganhou +'+NEW_USER_BONUS+' pacotes.')}
+async function listenPacks(uid){if(unsubPacks)unsubPacks();const q=query(collection(db,'packages'),where('ownerId','==',uid));unsubPacks=onSnapshot(q,s=>{state.packs=s.docs.map(x=>({id:x.id,...x.data()})).sort((a,b)=>(b.createdMs||0)-(a.createdMs||0));save();render()},err=>{firebaseError=err.message||String(err);render()})}
+async function listenInvites(uid){if(unsubInvites)unsubInvites();const q=query(collection(db,'invites'),where('inviterUid','==',uid));unsubInvites=onSnapshot(q,s=>{state.invites=s.docs.map(x=>({id:x.id,...x.data()}));save();render()},err=>{})}
+getRedirectResult(auth).catch(e=>{firebaseError=e.message||String(e);render()});
+onAuthStateChanged(auth,async u=>{if(!u){state.user=null;state.packs=[];state.invites=[];save();render();return}try{const data=await ensureUser(u);state.user={id:u.uid,name:data.name||u.displayName||'Entregador',email:data.email||u.email||'visitante@rotacerta.app',photoURL:data.photoURL||u.photoURL||'',login:data.login||(u.isAnonymous?'visitante':'google'),plan:data.plan||'trial',premiumUntil:data.premiumUntil,bonus:data.bonus||0,refCode:(data.referralCode||data.refCode||'').toUpperCase(),referralUsed:!!data.referralUsed,referralCount:data.referralCount||0,usedRefCode:data.usedRefCode||''};logSync('Login conectado V12.4');save();render();await listenPacks(u.uid);await listenInvites(u.uid);const ref=inviteParam();if(ref&&!state.user.referralUsed)setTimeout(()=>applyInvite(ref),700)}catch(e){firebaseError=e.message||String(e);render()}});
+function blocked(){return state.user&&left(state.user.premiumUntil)<=0&&Number(state.user.bonus||0)<=0}
+function setTab(t){state.tab=t;save();render()}
+async function renew(){let n=new Date(),b=state.user.premiumUntil&&new Date(state.user.premiumUntil)>n?new Date(state.user.premiumUntil):n;b.setDate(b.getDate()+PREMIUM);state.user.plan='premium';state.user.premiumUntil=b.toISOString();await setDoc(doc(db,'users',state.user.id),{plan:'premium',premiumUntil:b.toISOString()},{merge:true});save();render()}
+async function addBonus(){state.user.bonus=Number(state.user.bonus||0)+BONUS;await setDoc(doc(db,'users',state.user.id),{bonus:state.user.bonus},{merge:true});save();render()}
+async function addPack(e){e.preventDefault();if(blocked())return alert('Modo leitura. Renove para adicionar.');if(state.packs.length>=LIMIT&&state.user.plan!=='premium')return alert('Limite atingido.');let f=e.target,code=f.code.value.trim();if(!code)return alert('Informe o código.');await addDoc(collection(db,'packages'),{ownerId:state.user.id,code,address:(f.address.value.trim()+(f.number&&f.number.value.trim()? ', '+f.number.value.trim():'')),neighborhood:f.neighborhood.value.trim(),position:f.position.value,status:'pending',x:null,y:null,photo:null,createdAt:serverTimestamp(),createdMs:Date.now()});state.formCode='';state.formAddress='';state.formNumber='';state.formNeighborhood='';state.ocrCode='';state.ocrAddress='';state.ocrNumber='';state.ocrNeighborhood='';f.reset();save()}
+async function update(id,patch){await updateDoc(doc(db,'packages',id),patch)}
+async function del(id){if(confirm('Remover pacote?'))await deleteDoc(doc(db,'packages',id))}
+function maps(){mapsAll()}
+function readPhoto(inp,cb){let f=inp.files&&inp.files[0];if(!f)return;let r=new FileReader();r.onload=()=>cb(r.result);r.readAsDataURL(f)}
 
-        <section id="contato">
-            <h2>Contato</h2>
-            <p>WhatsApp: (81) 99768-1590(81 996724634))</p>
-            <p>Email: goldcarexpresso@gmail.com</p>
-            <p></p>M27V+78 Loteamento Gaibú, 1°subida após o posto de gasolina a loja fica em frente a torre - Gaibu, Cabo de Santo Agostinho - PE, 54590-000
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Gold Car Expresso</p>
-    </footer>
-    <script src="scripts.js"></script>
+
+function cleanOCRText(t){
+ return String(t||'')
+  .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+  .replace(/\r/g,'\n')
+  .replace(/[|]/g,'I')
+  .replace(/[“”]/g,'"')
+  .replace(/[_]{2,}/g,' ')
+  .replace(/[^\S\r\n]+/g,' ')
+  .replace(/([A-Z]{2,})(:)/g,'$1:')
+  .trim();
+}
+function normalizeLine(x){return String(x||'').replace(/\s{2,}/g,' ').trim()}
+function onlyDigits(x){return String(x||'').replace(/\D/g,'')}
+function lineAfter(lines,label){
+ let rx=new RegExp('^\\s*'+label+'\\s*[:\\-\\.]*\\s*(.*)$','i');
+ for(let i=0;i<lines.length;i++){
+   let m=lines[i].match(rx);
+   if(m){
+     let same=normalizeLine(m[1]||'');
+     if(same)return same;
+     for(let j=i+1;j<Math.min(lines.length,i+3);j++){
+       if(lines[j] && !/^(cpf|cnpj|ie|inscricao|tel|telefone|uf|cep)$/i.test(lines[j])) return normalizeLine(lines[j]);
+     }
+   }
+ }
+ return '';
+}
+function extractKeyValue(lines,labels){for(let lab of labels){let v=lineAfter(lines,lab);if(v)return v}return ''}
+function extractNFeKey(joined){
+ let nums=(joined.match(/\d[\d\s]{35,70}\d/g)||[]).map(x=>onlyDigits(x)).filter(x=>x.length>=40).sort((a,b)=>b.length-a.length);
+ return nums[0]||'';
+}
+function isNFeOrBarcode(v,data){
+ let d=onlyDigits(v);
+ if(d.length>=30)return true;
+ if(data && data.nfeKey && data.nfeKey.includes(d) && d.length>12)return true;
+ return false;
+}
+function extractCepBR(lines,joined){
+ let explicit=extractKeyValue(lines,['CEP']);
+ let m=(explicit+' '+joined).match(/\b\d{5}[- ]?\d{3}\b|\b\d{8}\b/);
+ if(!m)return '';
+ let v=onlyDigits(m[0]);
+ return v.length===8?v.slice(0,5)+'-'+v.slice(5):m[0];
+}
+function extractRecipient(lines){
+ let v=extractKeyValue(lines,['DESTINATARIO','DESTINATÁRIO','RECEBEDOR','CLIENTE','NOME']);
+ return v.replace(/cpf.*$/i,'').trim();
+}
+function extractCodeBR(lines,joined,nfeKey){
+ let labels=extractKeyValue(lines,['CODIGO','CÓDIGO','RASTREIO','TRACKING','PEDIDO','REMESSA','OBJETO','PROTOCOLO','VOLUME','NUMERO']);
+ let pool=(labels+' '+joined);
+ let candidates=pool.match(/\b[A-Z]{1,5}[- ]?\d{2,}[A-Z0-9-]{0,16}\b|\b[A-Z0-9]{6,22}\b/gi)||[];
+ candidates=candidates.map(x=>x.replace(/\s/g,'').toUpperCase())
+  .filter(x=>!/\d{5}-?\d{3}/.test(x))
+  .filter(x=>!(nfeKey||'').includes(onlyDigits(x)) || onlyDigits(x).length<12)
+  .filter(x=>!/(BRASIL|ENTREGA|ENDERECO|DESTINATARIO|REMETENTE|TELEFONE|WHATSAPP|PRODUTO|QUANTIDADE|PROTOCOLO|AUTORIZACAO|CHAVE|ACESSO|DANFE|SIMPLIFICADO)/i.test(x));
+ return candidates[0] || '';
+}
+function extractAddressBR(lines){
+ let explicit=extractKeyValue(lines,['END\\.?','ENDERECO','ENDEREÇO','LOGRADOURO','RUA','AVENIDA']);
+ if(explicit && !isNFeOrBarcode(explicit)) return normalizeLine(explicit);
+ const street=/(rua|r\.|av\.|avenida|travessa|trav\.|estrada|rodovia|rod\.|praca|praça|alameda|loteamento|lote|quadra|cond\.|condominio|sitio|sítio|residencial|conjunto)/i;
+ let idx=lines.findIndex(l=>street.test(l) && !isNFeOrBarcode(l));
+ let l=idx>=0?lines[idx]:'';
+ if(idx>=0 && lines[idx+1] && !/(cpf|cnpj|pedido|nota|telefone|whats|produto|transportadora|dados adicionais|chave|protocolo)/i.test(lines[idx+1]) && !isNFeOrBarcode(lines[idx+1]) && lines[idx+1].length<90){
+   l=normalizeLine(l+' '+lines[idx+1]);
+ }
+ return normalizeLine(l.replace(/endere[cç]o[:\- ]*/i,''));
+}
+function extractNumberBR(lines,address){
+ let explicit=extractKeyValue(lines,['NUM\\.?','N\\.?','NUMERO','NÚMERO']);
+ if(explicit && onlyDigits(explicit).length<=6)return explicit;
+ let m=String(address||'').match(/\b(?:n[ºo]?|numero|num)?\s*(\d{1,6}[A-Z]?)\b/i);
+ return m?m[1]:'';
+}
+function extractComplementBR(lines){
+ let v=extractKeyValue(lines,['COMP\\.?','COMPLEMENTO','REFERENCIA','REFERÊNCIA','APTO','APARTAMENTO','BLOCO','TORRE']);
+ return isNFeOrBarcode(v)?'':v;
+}
+function extractNeighborhoodBR(lines,address){
+ let explicit=extractKeyValue(lines,['BAIRRO']);
+ if(explicit && !isNFeOrBarcode(explicit))return explicit;
+ let b=lines.find(x=>/(bairro|jd\.|jardim|centro|gaibu|cohab|prazeres|ponte dos carvalhos|cabo|recife|jaboatao|jaboatão|olinda|boa viagem|piedade|candeias|curado|muribeca|santo aleixo|paiva)/i.test(x))||'';
+ b=normalizeLine(b.replace(/bairro[:\- ]*/i,''));
+ if(!b && address && address.includes('-')) b=normalizeLine(address.split('-').slice(-1)[0]);
+ return b;
+}
+function extractCityBR(lines){
+ let explicit=extractKeyValue(lines,['CIDADE','MUNICIPIO','MUNICÍPIO']);
+ if(explicit && !isNFeOrBarcode(explicit))return explicit;
+ return normalizeLine(lines.find(x=>/(cabo de santo agostinho|recife|jaboatao|jaboatão|olinda|paulista|ipojuca|PE\b|SP\b|RJ\b|MG\b|BA\b|CE\b|PB\b|AL\b|RN\b|PR\b|SC\b|RS\b)/i.test(x))||'');
+}
+function extractUF(lines,joined){
+ let explicit=extractKeyValue(lines,['UF']);
+ let m=(explicit+' '+joined).match(/\b(AC|AL|AP|AM|BA|CE|DF|ES|GO|MA|MT|MS|MG|PA|PB|PR|PE|PI|RJ|RN|RS|RO|RR|SC|SP|SE|TO)\b/i);
+ return m?m[1].toUpperCase():'';
+}
+function extractCompany(lines){
+ let v=extractKeyValue(lines,['EMITENTE','REMETENTE','TRANSPORTADORA','EMPRESA']);
+ return v.replace(/cnpj.*$/i,'').trim();
+}
+function confidenceScore(data){
+ let s=0;
+ if(data.code)s+=12;
+ if(data.address)s+=28;
+ if(data.number)s+=10;
+ if(data.neighborhood)s+=15;
+ if(data.cep)s+=15;
+ if(data.city)s+=10;
+ if(data.uf)s+=5;
+ if(data.recipient)s+=5;
+ if(isNFeOrBarcode(data.address,data))s-=35;
+ return Math.max(0,Math.min(100,s));
+}
+function guessFromOCR(text){
+ text=cleanOCRText(text);
+ let lines=text.split('\n').map(normalizeLine).filter(Boolean);
+ let joined=lines.join(' ');
+ let nfeKey=extractNFeKey(joined);
+ let address=extractAddressBR(lines);
+ let number=extractNumberBR(lines,address);
+ let complement=extractComplementBR(lines);
+ let data={
+   nfeKey,
+   code:extractCodeBR(lines,joined,nfeKey),
+   recipient:extractRecipient(lines),
+   address,
+   number:(number+(complement?' - '+complement:'')),
+   neighborhood:extractNeighborhoodBR(lines,address),
+   city:extractCityBR(lines),
+   uf:extractUF(lines,joined),
+   cep:extractCepBR(lines,joined),
+   company:extractCompany(lines),
+   raw:text
+ };
+ data.score=confidenceScore(data);
+ if(isNFeOrBarcode(data.address,data))data.address='';
+ return data;
+}
+async function ocrPackage(inp){
+ let f=inp.files&&inp.files[0]; if(!f)return;
+ let st=document.querySelector('#ocrStatus'); if(st)st.textContent='Lendo etiqueta... aguarde.';
+ try{
+   const result=await Tesseract.recognize(f,'por+eng');
+   const data=guessFromOCR(result.data.text||'');
+   state.ocr=data.raw; state.ocrCode=data.code; state.ocrAddress=data.address; state.ocrNumber=data.number; state.ocrNeighborhood=data.neighborhood; state.ocrCep=data.cep; state.ocrCity=data.city; state.ocrUf=data.uf; state.ocrRecipient=data.recipient; state.ocrCompany=data.company; state.ocrScore=data.score; state.ocrCep=data.cep; state.ocrCity=data.city;
+   logSync('OCR concluído'); save(); render();
+ }catch(e){ alert('Não consegui ler a etiqueta. Tente uma foto mais clara.'); }
+}
+function useOCR(){state.formCode=state.ocrCode||'';state.formAddress=state.ocrAddress||'';state.formNeighborhood=state.ocrNeighborhood||'';state.formNumber=state.ocrNumber||'';state.confirmOCR=true;save();render()}
+function clearOCR(){state.ocr='';state.ocrCode='';state.ocrAddress='';state.ocrNumber='';state.ocrNeighborhood='';state.ocrCep='';state.ocrCity='';state.ocrScore=0;state.formCode='';state.formAddress='';state.formNumber='';state.formNeighborhood='';state.confirmOCR=false;save();render()}
+
+function packPhoto(id,inp){readPhoto(inp,u=>update(id,{photo:u}))}
+function cargoFile(inp){readPhoto(inp,u=>{state.cargo=u;save();render()})}
+function markCargo(ev){let un=state.packs.find(p=>p.x===null||p.y===null);if(blocked()||!un)return;let r=ev.currentTarget.getBoundingClientRect();update(un.id,{x:((ev.clientX-r.left)/r.width)*100,y:((ev.clientY-r.top)/r.height)*100})}
+function exportData(){let blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='rota-certa-backup.json';a.click()}
+function clearLocal(){if(confirm('Limpar dados locais?')){localStorage.removeItem(STORE);location.reload()}}
+async function shareInvite(){const link=location.origin+location.pathname+'?ref='+encodeURIComponent(state.user.refCode),text='Use meu convite no Rota Certa Global: '+link;try{if(navigator.share)await navigator.share({title:'Rota Certa Global',text,url:link});else{await navigator.clipboard.writeText(link);alert('Link copiado: '+link)}}catch(e){prompt('Copie seu link:',link)}}
+async function copyCode(){try{await navigator.clipboard.writeText(state.user.refCode);alert('Código copiado: '+state.user.refCode)}catch(e){prompt('Copie seu código:',state.user.refCode)}}
+async function manualInvite(e){e.preventDefault();await applyInvite(e.target.ref.value)}
+function renderLogin(){document.getElementById('app').innerHTML=`<main class="auth"><section class="card hero"><div class="logo">🚚</div><h1>Rota Certa Global Pro</h1><p>3 dias grátis. Depois R$ 30,00/mês.</p>${firebaseError?`<div class="card error"><b>Erro</b><p>${safe(firebaseError)}</p></div>`:''}${inviteParam()?`<div class="card ok"><b>Convite detectado</b><p>Código: ${safe(inviteParam().toUpperCase())}</p></div>`:''}<div class="benefits"><span>🎁 3 dias grátis para testar</span><span>💳 Premium: ${price()} por 31 dias</span><span>👥 Indique um amigo e ganhe +120 pacotes</span><span>🎁 Ganhe +20 pacotes ao criar conta</span></div><button class="primary" onclick="enterGoogle()">Entrar com Google</button><button class="secondary" onclick="enterAnon()">Entrar como visitante</button></section></main>`}
+function render(){if(!state.user)return renderLogin();let l=left(state.user.premiumUntil),b=blocked();document.getElementById('app').innerHTML=`<main class="page"><header class="topbar"><div><small>Rota Certa Global Pro</small><h2>Olá, ${safe(state.user.name)}</h2></div><button class="small" onclick="exit()">Sair</button></header>${firebaseError?`<section class="card error"><b>Erro</b><p>${safe(firebaseError)}</p></section>`:''}${b?'<section class="card warning"><b>Modo leitura ativo</b><p>Renove para criar pacotes.</p></section>':''}<section class="card firebaseBox"><b>Firebase conectado</b><p>Login, Firestore e convites funcionando.</p></section><section class="stats"><article class="stat"><span>Premium</span><b>${l} dias</b></article><article class="stat"><span>Bônus</span><b>${state.user.bonus||0}</b></article><article class="stat"><span>Pacotes</span><b>${state.packs.length}</b></article><article class="stat"><span>Indicações</span><b>${state.invites.length||state.user.referralCount||0}</b></article></section><section class="card"><p>${price()} libera 31 dias. Código: <b>${safe(state.user.refCode)}</b></p><button class="primary" onclick="renew()">Simular pagamento +31 dias</button><button class="secondary" onclick="addBonus()">Simular bônus +120</button></section>${novidadesHtml()}${contaProHtml()}${redesSociaisHtml()}${painelConfigHtml()}${pagamentoManualHtml()}${contaProHtml,redesSociaisHtml,painelConfigHtml,saveOwnerSettings,openSocial,betaPublicoHtml()}${cargaIAHtml()}${rotaInteligenteHtml()}${mapaInteligenteCargaHtml()}${copilotoHtml()}${loadVehicleHtml()}${finderHtml()}${mapaCargaHtml()}${cargoHtml()}${painelBetaHtml()}${progressHtml()}${routeSummaryHtml()}<div class="tabs"><button class="${state.tab==='pacotes'?'active':''}" onclick="setTab('pacotes')">Pacotes</button><button class="${state.tab==='carga'?'active':''}" onclick="setTab('carga')">Carga</button><button class="${state.tab==='rota'?'active':''}" onclick="setTab('rota')">Rota</button><button class="${state.tab==='convite'?'active':''}" onclick="setTab('convite')">Convite</button><button class="${state.tab==='perfil'?'active':''}" onclick="setTab('perfil')">Perfil</button></div>${state.tab==='pacotes'?renderPacks():state.tab==='carga'?renderCargo():state.tab==='rota'?renderRoute():state.tab==='convite'?renderInvite():renderProfile()}</main>`}
+
+function openPhoto(url){state.modalPhoto=url;save();render()}
+function closePhoto(){state.modalPhoto='';save();render()}
+function navigateAddress(addr){
+ if(!addr)return alert('Este pacote está sem endereço.');
+ window.open('https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(addr),'_blank');
+}
+function progressHtml(){
+ let total=state.packs.length||0, done=state.packs.filter(p=>p.status==='delivered').length, pend=total-done;
+ let pct=total?Math.round((done/total)*100):0;
+ return '<section class="card"><h3>📊 Progresso do dia</h3><div class="progress"><b style="width:'+pct+'%"></b></div><p><b>'+pct+'%</b> concluído</p><p>Entregues: <b>'+done+'</b> • Faltam: <b>'+pend+'</b></p></section>';
+}
+
+function addressOf(p){return [p.address,p.neighborhood].filter(Boolean).join(', ')}
+function sortForRoute(list){
+ return [...list].sort((a,b)=>{
+   let ba=(a.neighborhood||'zz').localeCompare(b.neighborhood||'zz');
+   if(ba!==0)return ba;
+   return (a.address||'').localeCompare(b.address||'');
+ });
+}
+function mapsAll(){
+ let list=sortForRoute(state.packs.filter(p=>p.status!=='delivered'&&p.address));
+ if(!list.length)return alert('Nenhum pacote pendente com endereço.');
+ let url='https://www.google.com/maps/dir/'+list.map(p=>encodeURIComponent(addressOf(p))).join('/');
+ window.open(url,'_blank');
+}
+function mapsNeighborhood(nb){
+ let list=sortForRoute(state.packs.filter(p=>p.status!=='delivered'&&(p.neighborhood||'Sem bairro')===nb&&p.address));
+ if(!list.length)return alert('Nenhum endereço neste bairro.');
+ let url='https://www.google.com/maps/dir/'+list.map(p=>encodeURIComponent(addressOf(p))).join('/');
+ window.open(url,'_blank');
+}
+function routeSummaryHtml(){
+ let pending=state.packs.filter(p=>p.status!=='delivered');
+ let groups={};
+ pending.forEach(p=>{let k=p.neighborhood||'Sem bairro';(groups[k]=groups[k]||[]).push(p)});
+ let keys=Object.keys(groups).sort((a,b)=>groups[b].length-groups[a].length);
+ return '<section class="card"><h3>🚚 Rota inteligente</h3><p class="muted">Agrupada por bairro. A melhor sequência real será aberta no Google Maps.</p><div class="routeActions"><button class="primary" onclick="mapsAll()">Criar melhor rota</button><button class="secondary" onclick="setTab(&quot;rota&quot;)">Ver grupos</button></div>'+
+ (keys.map(k=>'<span class="chip">'+safe(k)+': '+groups[k].length+'</span>').join('')||'<p class="muted">Nenhum pacote pendente.</p>')+'</section>';
+}
+
+function createFromOCR(){
+ let code=state.formCode||state.ocrCode, address=state.formAddress||state.ocrAddress, neighborhood=state.formNeighborhood||state.ocrNeighborhood;
+ if(!code)return alert('Confirme o código do pacote.');
+ if(!address)return alert('Confirme o endereço.');
+ let f=document.createElement('form');
+ f.innerHTML='<input name="code" value="'+safe(code)+'"><input name="address" value="'+safe(address)+'"><input name="neighborhood" value="'+safe(neighborhood||'')+'"><select name="position"><option value="'+safe(state.formPosition||'')+'"></option></select>';
+ addPack({preventDefault(){},target:f});
+}
+function qualityHint(){
+ let s=Number(state.ocrScore||0);
+ if(s>=70)return 'Leitura boa. Confira e salve.';
+ if(s>=40)return 'Leitura média. Confira antes de salvar.';
+ return 'Leitura fraca. Tire foto mais clara e de frente.';
+}
+
+function getPendingList(){return sortForRoute(state.packs.filter(p=>p.status!=='delivered'))}
+function nextPack(){return getPendingList()[0]||null}
+function speak(text){
+ try{
+   speechSynthesis.cancel();
+   const u=new SpeechSynthesisUtterance(text);
+   u.lang='pt-BR';
+   u.rate=1;
+   speechSynthesis.speak(u);
+ }catch(e){alert(text)}
+}
+function voiceSummary(){
+ let total=state.packs.length||0;
+ let done=state.packs.filter(p=>p.status==='delivered').length;
+ let pending=total-done;
+ let n=nextPack();
+ let msg='Rota Certa. Você tem '+total+' pacotes. '+done+' entregues e '+pending+' pendentes.';
+ if(n) msg+=' Próxima entrega: pacote '+(n.code||'sem código')+', '+(n.address||'sem endereço')+', bairro '+(n.neighborhood||'não informado')+'.';
+ else msg+=' Todas as entregas foram concluídas.';
+ speak(msg);
+}
+async function markNextDelivered(){
+ let n=nextPack();
+ if(!n)return speak('Não há pacote pendente.');
+ await update(n.id,{status:'delivered'});
+ speak('Pacote '+(n.code||'')+' marcado como entregue.');
+}
+function handleVoiceCommand(text){
+ text=String(text||'').toLowerCase();
+ state.lastVoice=text; save(); render();
+ if(text.includes('próxima')||text.includes('proxima')){let n=nextPack(); return speak(n?'Próxima entrega: '+(n.code||'')+', '+(n.address||''):'Não há próxima entrega.');}
+ if(text.includes('entregue')||text.includes('marcar')) return markNextDelivered();
+ if(text.includes('rota')||text.includes('mapa')||text.includes('maps')){speak('Abrindo a melhor rota.'); return mapsAll();}
+ if(text.includes('pacote')){setTab('pacotes'); return speak('Abrindo pacotes.');}
+ if(text.includes('convite')){setTab('convite'); return speak('Abrindo convites.');}
+ if(text.includes('resumo')) return voiceSummary();
+ speak('Comando recebido: '+text+'. Você pode dizer próxima entrega, marcar entregue, criar rota ou abrir pacotes.');
+}
+function startVoice(){
+ const Rec=window.SpeechRecognition||window.webkitSpeechRecognition;
+ if(!Rec)return alert('Reconhecimento de voz não disponível neste navegador. Use Chrome no Android.');
+ const rec=new Rec();
+ rec.lang='pt-BR';
+ rec.interimResults=false;
+ rec.maxAlternatives=1;
+ rec.onstart=()=>{state.lastVoice='ouvindo...';save();render();}
+ rec.onerror=e=>{state.lastVoice='erro no microfone';save();render();}
+ rec.onresult=e=>handleVoiceCommand(e.results[0][0].transcript);
+ rec.start();
+}
+function copilotoHtml(){
+ let n=nextPack();
+ return '<section class="card voicebox"><h3>🗣️ Copiloto inteligente</h3><p class="muted">Use voz para trabalhar sem ficar tocando na tela.</p>'+
+ '<button class="voicebtn" onclick="voiceSummary()">Ouvir resumo da rota</button>'+
+ '<button class="voicebtn" onclick="startVoice()">Falar comando</button>'+
+ '<div class="note"><p><b>Comandos:</b> próxima entrega, marcar entregue, criar rota, abrir pacotes, convite, resumo.</p></div>'+
+ (n?'<p><b>Próximo:</b> '+safe(n.code)+' — '+safe(n.address||'sem endereço')+'</p>':'<p><b>Próximo:</b> nenhuma entrega pendente.</p>')+
+ (state.lastVoice?'<small>Último comando: '+safe(state.lastVoice)+'</small>':'')+'</section>';
+}
+
+
+
+function ensureQueue(){
+ if(!state.loadQueue)state.loadQueue=[];
+ if(!state.batch)state.batch={running:false,paused:false,total:0,done:0};
+}
+function compressImage(dataUrl,maxW=1100,quality=.72){
+ return new Promise(resolve=>{
+   let img=new Image();
+   img.onload=()=>{
+     let scale=Math.min(1,maxW/img.width);
+     let c=document.createElement('canvas');
+     c.width=Math.round(img.width*scale); c.height=Math.round(img.height*scale);
+     let ctx=c.getContext('2d');
+     ctx.drawImage(img,0,0,c.width,c.height);
+     resolve(c.toDataURL('image/jpeg',quality));
+   };
+   img.onerror=()=>resolve(dataUrl);
+   img.src=dataUrl;
+ });
+}
+function addLoadPhotos(inp){
+ ensureQueue();
+ let files=[...(inp.files||[])].slice(0,100);
+ if(!files.length)return;
+ let left=files.length;
+ files.forEach((f,i)=>{
+   let r=new FileReader();
+   r.onload=async()=>{
+     let photo=await compressImage(r.result);
+     state.loadQueue.push({
+       id:crypto.randomUUID(),
+       photo,
+       status:'aguardando',
+       raw:'',
+       code:'',
+       address:'',
+       number:'',
+       neighborhood:'',
+       position:'',
+       score:0,
+       created:new Date().toISOString()
+     });
+     left--;
+     if(left===0){
+       state.batch.total=state.loadQueue.length;
+       save(); render();
+       speak(files.length+' fotos adicionadas. Fila pronta para processar.');
+     }
+   };
+   r.readAsDataURL(f);
+ });
+ inp.value='';
+}
+function batchStats(){
+ ensureQueue();
+ let total=state.loadQueue.length;
+ let done=state.loadQueue.filter(x=>['revisar','salvo'].includes(x.status)).length;
+ let reading=state.loadQueue.filter(x=>x.status==='lendo etiqueta').length;
+ let waiting=state.loadQueue.filter(x=>x.status==='aguardando'||x.status==='erro').length;
+ let pct=total?Math.round((done/total)*100):0;
+ return {total,done,waiting,reading,pct};
+}
+
+
+function imageForOCR(dataUrl, mode='normal'){
+ return new Promise(resolve=>{
+   const img=new Image();
+   img.onload=()=>{
+     const maxW = mode==='zoom' ? 2200 : 1800;
+     const scale=Math.min(1,maxW/img.width);
+     const c=document.createElement('canvas');
+     c.width=Math.max(1,Math.round(img.width*scale));
+     c.height=Math.max(1,Math.round(img.height*scale));
+     const ctx=c.getContext('2d',{willReadFrequently:true});
+     ctx.drawImage(img,0,0,c.width,c.height);
+     try{
+       let im=ctx.getImageData(0,0,c.width,c.height);
+       let d=im.data;
+       for(let i=0;i<d.length;i+=4){
+         let r=d[i],g=d[i+1],b=d[i+2];
+         let gray=0.299*r+0.587*g+0.114*b;
+         if(mode==='bw'){
+           gray = gray>145 ? 255 : 0;
+         }else{
+           gray = Math.max(0,Math.min(255,(gray-112)*1.75+128));
+         }
+         d[i]=d[i+1]=d[i+2]=gray;
+       }
+       ctx.putImageData(im,0,0);
+     }catch(e){}
+     resolve(c.toDataURL('image/jpeg',0.94));
+   };
+   img.onerror=()=>resolve(dataUrl);
+   img.src=dataUrl;
+ });
+}
+function cropCenterLabel(dataUrl){
+ return new Promise(resolve=>{
+   const img=new Image();
+   img.onload=()=>{
+     const w=img.width,h=img.height;
+     const cropW=Math.round(w*0.82);
+     const cropH=Math.round(h*0.62);
+     const sx=Math.round((w-cropW)/2);
+     const sy=Math.round(h*0.12);
+     const c=document.createElement('canvas');
+     c.width=cropW*2;
+     c.height=cropH*2;
+     const ctx=c.getContext('2d',{willReadFrequently:true});
+     ctx.drawImage(img,sx,sy,cropW,cropH,0,0,c.width,c.height);
+     resolve(c.toDataURL('image/jpeg',0.96));
+   };
+   img.onerror=()=>resolve(dataUrl);
+   img.src=dataUrl;
+ });
+}
+function cropUpperLabel(dataUrl){
+ return new Promise(resolve=>{
+   const img=new Image();
+   img.onload=()=>{
+     const w=img.width,h=img.height;
+     const cropW=Math.round(w*0.90);
+     const cropH=Math.round(h*0.75);
+     const sx=Math.round((w-cropW)/2);
+     const sy=Math.round(h*0.03);
+     const c=document.createElement('canvas');
+     c.width=cropW*2;
+     c.height=cropH*2;
+     const ctx=c.getContext('2d',{willReadFrequently:true});
+     ctx.drawImage(img,sx,sy,cropW,cropH,0,0,c.width,c.height);
+     resolve(c.toDataURL('image/jpeg',0.96));
+   };
+   img.onerror=()=>resolve(dataUrl);
+   img.src=dataUrl;
+ });
+}
+function ocrQualityReason(item){
+ let s=Number(item.score||0);
+ if(s>=70)return 'Leitura boa.';
+ if(!item.address && !item.cep)return 'Foto pode estar distante, desfocada ou com reflexo. Use a opção de foto com a etiqueta ocupando quase toda a tela.';
+ if(!item.address)return 'Endereço não identificado. Aproxime a câmera da parte onde aparece ENDEREÇO/END.';
+ if(!item.cep)return 'CEP não identificado. Confira se a parte do CEP aparece nítida.';
+ return 'Revise os campos antes de salvar.';
+}
+
+async function smartOCR(photo){
+ const attempts=[];
+ const full=await imageForOCR(photo,'hd');
+ const r1=await Tesseract.recognize(full,'por+eng');
+ let d1=guessFromOCR(r1.data.text||'');
+ d1.rawConfidence=Math.round(r1.data.confidence||0);
+ d1.ocrMode='foto inteira';
+ attempts.push(d1);
+
+ const crop=await cropCenterLabel(photo);
+ const cropProcessed=await imageForOCR(crop,'zoom');
+ const r2=await Tesseract.recognize(cropProcessed,'por+eng');
+ let d2=guessFromOCR(r2.data.text||'');
+ d2.rawConfidence=Math.round(r2.data.confidence||0);
+ d2.ocrMode='recorte central';
+ d2.cropPreview=crop;
+ attempts.push(d2);
+
+ let best=attempts.sort((a,b)=>Number(b.score||0)-Number(a.score||0))[0];
+
+ if(Number(best.score||0)<70){
+   const upper=await cropUpperLabel(photo);
+   const bw=await imageForOCR(upper,'bw');
+   const r3=await Tesseract.recognize(bw,'por+eng');
+   let d3=guessFromOCR(r3.data.text||'');
+   d3.rawConfidence=Math.round(r3.data.confidence||0);
+   d3.ocrMode='recorte ampliado preto e branco';
+   d3.cropPreview=upper;
+   attempts.push(d3);
+   best=attempts.sort((a,b)=>Number(b.score||0)-Number(a.score||0))[0];
+ }
+ return best;
+}
+async function processQueueItem(id,silent=false){
+ ensureQueue();
+ let item=state.loadQueue.find(x=>x.id===id);
+ if(!item)return;
+ item.status='lendo etiqueta'; save(); render();
+ try{
+   const data=await smartOCR(item.photo);
+   Object.assign(item,{status:'revisar',raw:data.raw,code:data.code,address:data.address,neighborhood:data.neighborhood,cep:data.cep,city:data.city,uf:data.uf,recipient:data.recipient,company:data.company,number:data.number,score:data.score,rawConfidence:data.rawConfidence||0,ocrMode:data.ocrMode||'',cropPreview:data.cropPreview||'',qualityReason:''});
+   item.qualityReason=ocrQualityReason(item);
+   state.batch.done=(state.batch.done||0)+1;
+   save(); render();
+ }catch(e){
+   item.status='erro';
+   save(); render();
+   if(!silent)alert('Erro ao ler esta foto.');
+ }
+}
+async function processAllQueue(){
+ ensureQueue();
+ let pending=state.loadQueue.filter(x=>x.status==='aguardando'||x.status==='erro');
+ if(!pending.length)return alert('Nenhuma foto aguardando processamento.');
+ state.batch={running:true,paused:false,total:state.loadQueue.length,done:state.loadQueue.filter(x=>x.status==='revisar').length};
+ save(); render();
+ speak('Processando '+pending.length+' fotos.');
+ for(let item of pending){
+   ensureQueue();
+   if(!state.batch.running)break;
+   while(state.batch.paused){await new Promise(r=>setTimeout(r,600))}
+   await processQueueItem(item.id,true);
+ }
+ state.batch.running=false;
+ state.batch.paused=false;
+ save(); render();
+ speak('Processamento concluído. Revise e salve os pacotes.');
+}
+function pauseBatch(){ensureQueue();state.batch.paused=true;save();render();speak('Fila pausada.')}
+function resumeBatch(){ensureQueue();state.batch.paused=false;if(!state.batch.running)processAllQueue();else{save();render();speak('Continuando fila.')}} 
+function cancelBatch(){ensureQueue();state.batch.running=false;state.batch.paused=false;state.loadQueue.forEach(x=>{if(x.status==='lendo etiqueta')x.status='aguardando'});save();render();speak('Processamento cancelado.')}
+async function saveQueueItem(id){
+ ensureQueue();
+ let item=state.loadQueue.find(x=>x.id===id);
+ if(!item)return;
+ if(!item.code)return alert('Informe o código.');
+ if(!item.address)return alert('Informe o endereço.');
+ await addDoc(collection(db,'packages'),{
+   ownerId:state.user.id,
+   code:item.code,
+   address:(item.address+(item.number?', '+item.number:'')),
+   neighborhood:item.neighborhood||'',
+   position:item.position||'',
+   status:'pending',
+   x:null,y:null,
+   photo:item.photo||null,recipient:item.recipient||'',cep:item.cep||'',city:item.city||'',uf:item.uf||'',company:item.company||'',createdAt:serverTimestamp(),
+   createdMs:Date.now()
+ });
+ item.status='salvo';
+ state.loadQueue=state.loadQueue.filter(x=>x.id!==id);
+ logSync('Pacote criado pelo modo múltiplas fotos');
+ save(); render();
+}
+async function saveAllReviewed(){
+ ensureQueue();
+ let reviewed=state.loadQueue.filter(x=>x.status==='revisar'&&x.code&&x.address);
+ if(!reviewed.length)return alert('Nenhum pacote revisado pronto para salvar.');
+ for(let item of [...reviewed]){await saveQueueItem(item.id)}
+ speak(reviewed.length+' pacotes salvos.');
+}
+function updateQueue(id,key,val){
+ ensureQueue();
+ let item=state.loadQueue.find(x=>x.id===id);
+ if(item){item[key]=val;save();}
+}
+function removeQueueItem(id){
+ ensureQueue();
+ state.loadQueue=state.loadQueue.filter(x=>x.id!==id);
+ save(); render();
+}
+function clearQueue(){
+ if(!confirm('Limpar toda a fila?'))return;
+ state.loadQueue=[];
+ state.batch={running:false,paused:false,total:0,done:0};
+ save();render();
+}
+function loadVehicleHtml(){
+ ensureQueue();
+ let st=batchStats();
+ let items=state.loadQueue.map((it,idx)=>{
+   let cls=it.status==='erro'?'statuserr':(it.status==='revisar'?'statusok':'statuswarn');
+   return '<div class="queueItem"><div class="minirow">'+
+   '<img src="'+it.photo+'" onclick="openPhoto(&quot;'+it.photo+'&quot;)"><div><b>Foto '+(idx+1)+'/'+st.total+'</b><br><span class="'+cls+'">'+safe(it.status)+'</span><br><small>Confiança: '+safe(it.score||0)+'%</small></div>'+
+   '<button class="small" onclick="processQueueItem(&quot;'+it.id+'&quot;)">Ler</button></div>'+((it.ocrMode)?'<small>Modo OCR: '+safe(it.ocrMode)+'</small>':'')+((it.cropPreview)?'<br><img class="cropPreview" src="'+it.cropPreview+'">':'')+((it.status==='revisar'&&Number(it.score||0)<70)?'<p class="hint">Revise: leitura abaixo de 70%. '+safe(it.qualityReason||'')+'</p>':'')+
+   '<input placeholder="Código" value="'+safe(it.code||'')+'" oninput="updateQueue(&quot;'+it.id+'&quot;,&quot;code&quot;,this.value)">'+
+   '<input placeholder="Destinatário (opcional)" value="'+safe(it.recipient||'')+'" oninput="updateQueue(&quot;'+it.id+'&quot;,&quot;recipient&quot;,this.value)">'+
+   '<input placeholder="Endereço" value="'+safe(it.address||'')+'" oninput="updateQueue(&quot;'+it.id+'&quot;,&quot;address&quot;,this.value)">'+
+   '<input placeholder="Número/complemento" value="'+safe(it.number||'')+'" oninput="updateQueue(&quot;'+it.id+'&quot;,&quot;number&quot;,this.value)">'+
+   '<input placeholder="Bairro" value="'+safe(it.neighborhood||'')+'" oninput="updateQueue(&quot;'+it.id+'&quot;,&quot;neighborhood&quot;,this.value)">'+
+   '<select onchange="updateQueue(&quot;'+it.id+'&quot;,&quot;position&quot;,this.value)"><option value="">Posição no veículo</option><option '+(it.position==='Frente'?'selected':'')+'>Frente</option><option '+(it.position==='Meio'?'selected':'')+'>Meio</option><option '+(it.position==='Fundo'?'selected':'')+'>Fundo</option><option '+(it.position==='Lado esquerdo'?'selected':'')+'>Lado esquerdo</option><option '+(it.position==='Lado direito'?'selected':'')+'>Lado direito</option></select>'+
+   '<div class="routeActions"><button class="primary" onclick="saveQueueItem(&quot;'+it.id+'&quot;)">Salvar pacote</button><button class="danger" onclick="removeQueueItem(&quot;'+it.id+'&quot;)">Remover</button></div></div>';
+ }).join('');
+ return '<section class="card loadbox"><h3>📦 Modo Múltiplas Fotos</h3><p class="muted">Selecione várias fotos da galeria/WhatsApp. O app cria uma fila real e processa uma por uma.</p><div class="guide">📷 Dica: para melhor leitura, a etiqueta deve ocupar quase toda a foto, bem iluminada e sem reflexo.</div>'+
+ '<label class="file">Adicionar várias fotos<input type="file" accept="image/*" multiple onchange="addLoadPhotos(this)"></label>'+
+ '<div class="queueTools"><button class="primary" onclick="processAllQueue()">Processar</button><button class="secondary" onclick="pauseBatch()">Pausar</button><button class="secondary" onclick="resumeBatch()">Continuar</button></div>'+
+ '<div class="queueTools"><button class="secondary" onclick="cancelBatch()">Cancelar</button><button class="primary" onclick="saveAllReviewed()">Salvar revisados</button><button class="danger" onclick="clearQueue()">Limpar fila</button></div>'+
+ '<div class="batchbar"><b style="width:'+st.pct+'%"></b></div><p><b>'+st.pct+'%</b> • '+st.done+' de '+st.total+' processadas • Aguardando: '+st.waiting+'</p>'+
+ (state.batch.paused?'<p class="hint">Fila pausada.</p>':'')+
+ '<div class="queueGrid">'+(items||'<p class="muted">Nenhuma foto na fila.</p>')+'</div></section>';
+}
+
+
+function autoPositionByIndex(i,total){
+ if(total<=0)return 'Meio';
+ const p=(i+1)/total;
+ if(p<=0.25)return 'Frente';
+ if(p<=0.50)return 'Lado direito';
+ if(p<=0.75)return 'Lado esquerdo';
+ return 'Fundo';
+}
+function normalizeBairro(b){
+ b=String(b||'').trim();
+ return b || 'Sem bairro';
+}
+function cargoGroups(){
+ const list=[...(state.packs||[])].filter(p=>p.status!=='delivered');
+ list.sort((a,b)=>(normalizeBairro(a.neighborhood||a.bairro||'')).localeCompare(normalizeBairro(b.neighborhood||b.bairro||''),'pt-BR'));
+ return list.reduce((acc,p,i)=>{
+   const bairro=normalizeBairro(p.neighborhood||p.bairro||'');
+   if(!acc[bairro])acc[bairro]=[];
+   acc[bairro].push({...p,_suggest:autoPositionByIndex(i,list.length)});
+   return acc;
+ },{});
+}
+
+function packList(){
+ return [...(state.packs||[])].sort((a,b)=>{
+   let ba=(a.neighborhood||'').localeCompare(b.neighborhood||'','pt-BR');
+   if(ba!==0)return ba;
+   return (a.createdMs||0)-(b.createdMs||0);
+ });
+}
+function priorityOfPack(index,total){
+ if(total<=1)return ['pHigh','Próxima'];
+ const p=(index+1)/total;
+ if(p<=0.33)return ['pHigh','Próxima'];
+ if(p<=0.66)return ['pMid','Intermediária'];
+ return ['pLow','Última'];
+}
+function searchPacks(){
+ const q=String(state.finderQuery||'').toLowerCase().trim();
+ const list=packList().filter(p=>p.status!=='delivered');
+ if(!q)return list.slice(0,5);
+ return list.filter(p=>[
+   p.code,p.recipient,p.address,p.neighborhood,p.cep,p.city,p.position
+ ].join(' ').toLowerCase().includes(q)).slice(0,12);
+}
+function setFinder(q){state.finderQuery=q;save();render()}
+function finderHtml(){
+ const list=searchPacks();
+ const all=packList().filter(p=>p.status!=='delivered');
+ const total=all.length;
+ const rows=list.map(p=>{
+   const idx=all.findIndex(x=>x.id===p.id);
+   const pr=priorityOfPack(idx<0?0:idx,total);
+   const addr=[p.address,p.neighborhood,p.city,p.cep].filter(Boolean).join(', ');
+   return '<div class="resultCard"><div class="row">'+
+   (p.photo?'<img class="finderPhoto" onclick="openPhoto(&quot;'+p.photo+'&quot;)" src="'+p.photo+'">':'<div class="finderPhoto" style="display:grid;place-items:center;color:#94a3b8">Sem foto</div>')+
+   '<div style="flex:1"><div class="bigcode">'+safe(p.code||'Sem código')+'</div>'+
+   '<span class="priority '+pr[0]+'">'+pr[1]+'</span>'+
+   '<p>'+safe(addr||'Sem endereço')+'</p>'+
+   '<small>Posição: '+safe(p.position||autoPositionByIndex(idx,total))+' • Bairro: '+safe(p.neighborhood||'sem bairro')+'</small></div></div>'+
+   '<div class="finderActions"><button class="navbtn" onclick="navigateAddress(&quot;'+safe(addr)+'&quot;)">Abrir Maps</button>'+
+   '<button class="small" onclick="update(&quot;'+p.id+'&quot;,{status:&quot;delivered&quot;})">Marcar entregue</button></div></div>';
+ }).join('');
+ return '<section class="card finderBox"><h3>🔍 Localizador de pacotes</h3>'+
+ '<p class="muted">Encontre rapidamente por código, destinatário, rua, bairro, CEP ou posição no veículo.</p>'+
+ '<input placeholder="Buscar pacote, rua, bairro, código..." value="'+safe(state.finderQuery||'')+'" oninput="setFinder(this.value)">'+
+ '<p><b>Resultados:</b> '+list.length+' • <b>Pendentes:</b> '+total+'</p>'+
+ (rows||'<p class="muted">Nenhum pacote encontrado.</p>')+'</section>';
+}
+
+
+function positionCode(pos,i){
+ const map={'Frente':'F','Lado direito':'D','Lado esquerdo':'E','Fundo':'T','Meio':'M'};
+ return (map[pos]||'M')+(i+1);
+}
+function mapaCargaData(){
+ const list=packList().filter(p=>p.status!=='delivered');
+ const positions=['Frente','Lado direito','Lado esquerdo','Fundo'];
+ const buckets={Frente:[], 'Lado direito':[], 'Lado esquerdo':[], Fundo:[]};
+ list.forEach((p,i)=>{
+   const pos=p.position||autoPositionByIndex(i,list.length);
+   const key=buckets[pos]?pos:'Fundo';
+   buckets[key].push(p);
+ });
+ return {positions,buckets,list};
+}
+
+
+
+function regiaoPacote(p){
+ const bairro = String((p && (p.neighborhood || p.bairro)) || '').trim();
+ const cep = String((p && p.cep) || '').trim();
+ if(bairro) return bairro;
+ if(cep) return 'CEP ' + cep.slice(0,5);
+ return 'Sem região';
+}
+function prioridadePacote(index,total){
+ if(total<=1)return 'Próxima';
+ const p=(index+1)/total;
+ if(p<=0.33)return 'Alta';
+ if(p<=0.66)return 'Média';
+ return 'Baixa';
+}
+function posicaoInteligente(index,total){
+ if(total<=0)return 'Meio';
+ const p=(index+1)/total;
+ if(p<=0.20)return 'Banco passageiro';
+ if(p<=0.40)return 'Frente';
+ if(p<=0.65)return 'Lado direito';
+ if(p<=0.85)return 'Lado esquerdo';
+ return 'Porta-malas / fundo';
+}
+function organizarCargaIA(){
+ const list=[...(state.packs||[])].filter(p=>p && p.status!=='delivered');
+ list.sort((a,b)=>{
+   const ra=regiaoPacote(a), rb=regiaoPacote(b);
+   const c=ra.localeCompare(rb,'pt-BR');
+   if(c!==0)return c;
+   return String(a.address||'').localeCompare(String(b.address||''),'pt-BR');
+ });
+ const total=list.length;
+ state.packs=(state.packs||[]).map(p=>{
+   const i=list.findIndex(x=>x.id===p.id);
+   if(i<0)return p;
+   return {...p, position: posicaoInteligente(i,total), prioridade: prioridadePacote(i,total), ordemCarga: i+1};
+ });
+ save();
+ render();
+}
+function cargaIAGroups(){
+ const list=[...(state.packs||[])].filter(p=>p && p.status!=='delivered').sort((a,b)=>(a.ordemCarga||9999)-(b.ordemCarga||9999));
+ return list.reduce((acc,p)=>{
+   const r=regiaoPacote(p);
+   if(!acc[r])acc[r]=[];
+   acc[r].push(p);
+   return acc;
+ },{});
+}
+
+function rotaList(){
+ const list=[...(state.packs||[])].filter(p=>p && p.status!=='delivered');
+ list.sort((a,b)=>{
+   const ra=regiaoPacote(a), rb=regiaoPacote(b);
+   const c=ra.localeCompare(rb,'pt-BR');
+   if(c!==0)return c;
+   const ca=String(a.cep||''), cb=String(b.cep||'');
+   if(ca!==cb)return ca.localeCompare(cb);
+   return String(a.address||'').localeCompare(String(b.address||''),'pt-BR');
+ });
+ return list.map((p,i)=>({...p, rotaOrdem:i+1}));
+}
+function rotaEndereco(p){
+ return [p.address,p.number,p.neighborhood,p.city,p.uf,p.cep].filter(Boolean).join(', ');
+}
+function rotaStats(){
+ const list=rotaList();
+ const bairros=[...new Set(list.map(p=>regiaoPacote(p)))];
+ const km=Math.max(0, Math.round((list.length*2.1 + bairros.length*1.7)*10)/10);
+ const min=Math.max(0, Math.round(list.length*7 + bairros.length*5));
+ const economia=Math.max(0, Math.round(list.length*2.5));
+ return {total:list.length,bairros:bairros.length,km,min,economia};
+}
+function abrirRotaMaps(){
+ const list=rotaList().slice(0,9);
+ if(!list.length){alert('Nenhum pacote pendente para criar rota.');return;}
+ const destinos=list.map(p=>rotaEndereco(p)).filter(Boolean);
+ if(!destinos.length){alert('Nenhum endereço válido encontrado.');return;}
+ const origin='';
+ const destination=encodeURIComponent(destinos[destinos.length-1]);
+ const waypoints=destinos.slice(0,-1).map(x=>encodeURIComponent(x)).join('|');
+ let url='https://www.google.com/maps/dir/?api=1&travelmode=driving&destination='+destination;
+ if(waypoints)url+='&waypoints='+waypoints;
+ window.open(url,'_blank');
+}
+function abrirProximaEntrega(){
+ const p=rotaList()[0];
+ if(!p){alert('Nenhuma entrega pendente.');return;}
+ const addr=rotaEndereco(p);
+ if(!addr){alert('Endereço vazio. Revise o pacote.');return;}
+ window.open('https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(addr),'_blank');
+}
+
+function smartLoadList(){
+ const list=[...(state.packs||[])].filter(p=>p && p.status!=='delivered');
+ list.sort((a,b)=>{
+   const pa=Number(a.ordemCarga||9999), pb=Number(b.ordemCarga||9999);
+   if(pa!==pb)return pa-pb;
+   const ra=(typeof regiaoPacote==='function')?regiaoPacote(a):String(a.neighborhood||'');
+   const rb=(typeof regiaoPacote==='function')?regiaoPacote(b):String(b.neighborhood||'');
+   const c=ra.localeCompare(rb,'pt-BR');
+   if(c!==0)return c;
+   return String(a.address||'').localeCompare(String(b.address||''),'pt-BR');
+ });
+ return list.map((p,i)=>({...p,_route:i+1,_smartPos:p.position||((typeof posicaoInteligente==='function')?posicaoInteligente(i,list.length):'Meio')}));
+}
+function laneFromPosition(pos){
+ pos=String(pos||'').toLowerCase();
+ if(pos.includes('esquer'))return 'esq';
+ if(pos.includes('direit'))return 'dir';
+ return 'meio';
+}
+function smartEndereco(p){
+ return [p.address,p.number,p.neighborhood,p.city,p.uf,p.cep].filter(Boolean).join(', ');
+}
+function openPkgOnMap(id){
+ const p=(state.packs||[]).find(x=>x.id===id);
+ if(!p){alert('Pacote não encontrado.');return}
+ const addr=smartEndereco(p);
+ if(!addr){alert('Endereço vazio. Revise o pacote.');return}
+ window.open('https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(addr),'_blank');
+}
+function marcarPacoteEntregue(id){
+ const p=(state.packs||[]).find(x=>x.id===id);
+ if(!p){alert('Nenhum pacote pendente.');return}
+ p.status='delivered';
+ p.deliveredAt=Date.now();
+ save();
+ render();
+}
+function mapaInteligenteCargaHtml(){
+ const list=smartLoadList();
+ const next=list[0]||null;
+ const lanes={esq:[],meio:[],dir:[]};
+ list.forEach(p=>lanes[laneFromPosition(p._smartPos)].push(p));
+ const renderLane=(title,arr)=>'<div class="loadLane"><h4>'+title+'</h4>'+(
+   arr.length?arr.slice(0,8).map(p=>'<div class="loadPkg '+(next&&p.id===next.id?'next':'')+'" onclick="openPkgOnMap(&quot;'+p.id+'&quot;)"><b>#'+p._route+' '+safe(p.code||'sem código')+'</b><br><small>'+safe(p.neighborhood||'sem bairro')+'</small><br><small>'+safe(p._smartPos||'sem posição')+'</small></div>').join(''):'<div class="loadPkg">Vazio</div>'
+ )+'</div>';
+ const delivered=(state.packs||[]).filter(p=>p&&p.status==='delivered').length;
+ const total=(state.packs||[]).length;
+ const pending=list.length;
+ const nextInfo=next?('Próximo pacote: '+safe(next.code||'sem código')+' • '+safe(next._smartPos)+' • '+safe(next.neighborhood||'sem bairro')):'Nenhum pacote pendente.';
+ return '<section class="card smartMap"><h3>🚐 Mapa inteligente da carga</h3>'+
+ '<p class="muted">Veja onde cada pacote está no veículo. Toque no pacote para abrir no mapa.</p>'+
+ '<div class="cargoHint">'+nextInfo+'</div>'+
+ '<div class="smartStats"><div><small>Total</small><b>'+total+'</b></div><div><small>Pendentes</small><b>'+pending+'</b></div><div><small>Entregues</small><b>'+delivered+'</b></div><div><small>Próximo</small><b>'+(next?safe(next.code||'-'):'-')+'</b></div></div>'+
+ '<div class="vehicleTop"><div class="vehicleCab">CABINE / FRENTE</div><div class="vehicleBody">'+
+ renderLane('ESQUERDA',lanes.esq)+renderLane('MEIO / FUNDO',lanes.meio)+renderLane('DIREITA',lanes.dir)+
+ '</div></div>'+
+ '<div class="smartActions"><button onclick="openPkgOnMap(&quot;'+(next?next.id:'')+'&quot;)">Abrir próximo</button><button class="navbtn" onclick="marcarPacoteEntregue(&quot;'+(next?next.id:'')+'&quot;)">Marcar próximo entregue</button></div>'+
+ '</section>';
+}
+
+function rotaInteligenteHtml(){
+ const list=rotaList();
+ const s=rotaStats();
+ const steps=list.slice(0,10).map(p=>{
+   return '<div class="routeStep"><div class="routeNum">'+p.rotaOrdem+'</div><div class="routeText">'+
+   '<b>'+safe(p.code||'sem código')+'</b><br>'+
+   '<small>'+safe(rotaEndereco(p)||'sem endereço')+'</small><br>'+
+   '<small>📦 '+safe(p.position||'sem posição')+' • '+safe(regiaoPacote(p))+'</small>'+
+   '</div></div>';
+ }).join('');
+ return '<section class="card routeAI"><h3>🗺️ Rota inteligente</h3>'+
+ '<p class="muted">Ordena as entregas pendentes por região, CEP e endereço. Abre a sequência no Google Maps.</p>'+
+ '<div class="routeStats">'+
+ '<div><small>Paradas</small><b>'+s.total+'</b></div>'+
+ '<div><small>Km estimado</small><b>'+s.km+'</b></div>'+
+ '<div><small>Tempo</small><b>'+s.min+'m</b></div>'+
+ '</div>'+
+ '<div class="cargoHint">Economia estimada: '+s.economia+' minutos usando organização e sequência inteligente.</div>'+
+ '<div class="feedbackBtns"><button onclick="abrirProximaEntrega()">Abrir próxima</button><button onclick="abrirRotaMaps()">Abrir rota no Maps</button></div>'+
+ '<div class="routeList">'+(steps||'<p class="muted">Nenhuma entrega pendente.</p>')+(list.length>10?'<p class="muted">+ '+(list.length-10)+' paradas restantes.</p>':'')+'</div>'+
+ '</section>';
+}
+
+function cargaIAHtml(){
+ const groups=cargaIAGroups();
+ const regs=Object.keys(groups);
+ const total=regs.reduce((s,r)=>s+groups[r].length,0);
+ const cards=regs.map(r=>{
+   const arr=groups[r];
+   return '<div class="autoCard"><b>'+safe(r)+' • '+arr.length+'</b><div class="autoMini">'+
+   arr.slice(0,8).map(p=>'#'+safe(p.ordemCarga||'-')+' 📦 '+safe(p.code||'sem código')+'<br>↳ '+safe(p.position||'sem posição')+' • '+safe(p.prioridade||'prioridade')).join('<br>')+
+   (arr.length>8?'<br>...':'')+'</div></div>';
+ }).join('');
+ return '<section class="card autoLoad"><h3>🤖 Organização automática da carga</h3>'+
+ '<p class="muted">Organiza os pacotes pendentes por região, define prioridade e sugere onde colocar no veículo.</p>'+
+ '<div class="autoWarn">Fluxo recomendado: fotografe etiquetas → revise OCR → salve pacotes → toque em organizar carga.</div>'+
+ '<button class="autoBtn" onclick="organizarCargaIA()">Organizar carga automaticamente</button>'+
+ '<p><b>Pacotes pendentes:</b> '+total+' • <b>Regiões:</b> '+regs.length+'</p>'+
+ '<div class="autoGrid">'+(cards||'<div class="autoCard">Nenhum pacote pendente para organizar.</div>')+'</div></section>';
+}
+
+
+
+const PIX_CODE_ROTA_CERTA = `00020126910014BR.GOV.BCB.PIX0136adfc8f8b-3483-4598-b078-7a6a5f61393a0229ECONOMIZE TEMPO E COMBUSTÍVEL5204000053039865802BR5918Joel Pinheiro Lins6009SAO PAULO62140510QTBnEUqWWo63044CEA`;
+function trialInfo(){
+ const now=Date.now();
+ if(!state.trialStartedAt){state.trialStartedAt=now;save();}
+ const trialMs=3*24*60*60*1000;
+ const end=Number(state.trialStartedAt||now)+trialMs;
+ const left=Math.max(0,end-now);
+ const days=Math.floor(left/(24*60*60*1000));
+ const hours=Math.floor((left%(24*60*60*1000))/(60*60*1000));
+ const expired=left<=0 && !state.premiumUntil;
+ return {left,days,hours,expired,end};
+}
+function premiumActive(){return Number(state.premiumUntil||0)>Date.now()}
+function trialCountdownHtml(){
+ const t=trialInfo();
+ if(premiumActive())return '<div class="countdown">⭐ Premium ativo. Continue usando sem limite.</div>';
+ if(t.expired)return '<div class="countdown" style="border-color:#ef4444;background:#450a0a">⏳ Seu teste grátis terminou. Assine para continuar usando todos os recursos.</div>';
+ return '<div class="countdown">🎉 Teste grátis ativo: restam <b>'+t.days+' dia(s) e '+t.hours+' hora(s)</b>. Depois, Premium por R$ 30,00/mês.</div>';
+}
+function copiarPix(){
+ if(navigator.clipboard)navigator.clipboard.writeText(PIX_CODE_ROTA_CERTA);
+ alert('Código PIX copiado. Abra o app do banco, cole o código e finalize o pagamento.');
+}
+function mostrarPix(){
+ alert('Toque em "Copiar código PIX", pague no banco e depois toque em "Já paguei".');
+}
+function marcarJaPaguei(){
+ state.paymentRequestedAt=Date.now();
+ save();
+ alert('Solicitação registrada. Após confirmar o PIX, o Premium será liberado manualmente.');
+ render();
+}
+function pagamentoManualHtml(){
+ return '<section class="card premiumBox"><h3>💳 Premium Rota Certa</h3>'+
+ trialCountdownHtml()+
+ '<p class="muted">Experimente tudo por 3 dias. Depois continue economizando tempo nas entregas por <b>R$ 30,00/mês</b>.</p>'+
+ '<div class="accountGrid"><div class="accountItem"><small>Brasil</small><b>PIX</b></div><div class="accountItem"><small>Exterior</small><b>Binance</b></div></div>'+
+ '<h4>🇧🇷 Pagar com PIX</h4>'+
+ '<div class="pixBox">'+(getSettings().pix||PIX_CODE_ROTA_CERTA)+'</div>'+
+ '<button onclick="copiarPix()">Copiar código PIX</button>'+
+ '<button class="navbtn" onclick="marcarJaPaguei()">Já paguei</button>'+
+ '<h4>🌎 Pagamento internacional</h4>'+
+ '<button class="small" onclick="window.open(getSettings().binance||state.binanceLink||&quot;#&quot;,&quot;_blank&quot;)">Pagar com Binance / USDT</button>'+
+ '<p class="muted">A liberação do Premium será manual após confirmação do pagamento.</p></section>';
+}
+function minhaContaHtml(){
+ const t=trialInfo(); const ativo=premiumActive(); const bonus=Number(state.inviteBonus||0);
+ return '<section class="card neonGlow"><h3>👤 Minha Conta</h3><div class="accountGrid">'+
+ '<div class="accountItem"><small>Status</small><b>'+(ativo?'Premium':'Teste/Grátis')+'</b></div>'+
+ '<div class="accountItem"><small>Restante</small><b>'+(ativo?'Ativo':(t.expired?'Expirado':t.days+'d '+t.hours+'h'))+'</b></div>'+
+ '<div class="accountItem"><small>Plano</small><b>R$ 30/mês</b></div>'+
+ '<div class="accountItem"><small>Bônus</small><b>'+bonus+'</b></div></div>'+
+ '<p class="muted">Acompanhe seu teste grátis, plano e bônus de convite.</p></section>';
+}
+
+
+function userDisplayName(){
+ return (state.userName || (state.user&&state.user.displayName) || 'Rota Certa');
+}
+function userEmail(){
+ return (state.userEmail || (state.user&&state.user.email) || 'usuário visitante');
+}
+
+function getSettings(){
+ const defaults = {
+   tiktok: "https://www.tiktok.com/@rootacerta?_r=1&_t=ZS-97iy46cJxCv",
+   instagram: "",
+   whatsapp: "",
+   youtube: "",
+   pix: (typeof PIX_CODE_ROTA_CERTA !== 'undefined' ? PIX_CODE_ROTA_CERTA : (state.pixKey||'')),
+   binance: state.binanceLink||""
+ };
+ return {...defaults, ...(state.ownerSettings||{})};
+}
+function saveOwnerSettings(){
+ const s = getSettings();
+ s.tiktok = document.getElementById('setTikTok')?.value || "";
+ s.instagram = document.getElementById('setInstagram')?.value || "";
+ s.whatsapp = document.getElementById('setWhatsApp')?.value || "";
+ s.youtube = document.getElementById('setYouTube')?.value || "";
+ s.pix = document.getElementById('setPix')?.value || "";
+ s.binance = document.getElementById('setBinance')?.value || "";
+ state.ownerSettings = s;
+ state.pixKey = s.pix;
+ state.binanceLink = s.binance;
+ save();
+ alert('Configurações salvas.');
+ render();
+}
+function openSocial(kind){
+ const s=getSettings();
+ const url=s[kind];
+ if(!url){alert('Link ainda não configurado.');return;}
+ window.open(url,'_blank');
+}
+function redesSociaisHtml(){
+ return '<section class="card socialPanel"><h3>📱 Redes sociais e tutoriais</h3>'+
+ '<p class="muted">Acompanhe tutoriais, novidades e dicas de uso do Rota Certa Global Pro.</p>'+
+ '<div class="socialGrid">'+
+ '<button class="socialBtn" onclick="openSocial(&quot;tiktok&quot;)"><b>TikTok</b><br><small>@rootacerta</small></button>'+
+ '<button class="socialBtn" onclick="openSocial(&quot;instagram&quot;)"><b>Instagram</b><br><small>Tutoriais e novidades</small></button>'+
+ '<button class="socialBtn" onclick="openSocial(&quot;youtube&quot;)"><b>YouTube</b><br><small>Como usar o app</small></button>'+
+ '<button class="socialBtn" onclick="openSocial(&quot;whatsapp&quot;)"><b>WhatsApp</b><br><small>Suporte e pagamentos</small></button>'+
+ '</div>'+
+ '<div class="configMini">🚚 Aqui o motorista encontra vídeos de como usar OCR, organizar carga, abrir rotas e ativar o Premium.</div>'+
+ '</section>';
+}
+function painelConfigHtml(){
+ const s=getSettings();
+ return '<section class="card configPanel"><h3>⚙️ Painel do dono</h3>'+
+ '<p class="muted">Edite redes sociais, PIX e link Binance sem mexer no código. As alterações ficam salvas neste navegador.</p>'+
+ '<label>TikTok</label><input id="setTikTok" value="'+safe(s.tiktok)+'" placeholder="Link do TikTok">'+
+ '<label>Instagram</label><input id="setInstagram" value="'+safe(s.instagram)+'" placeholder="Link do Instagram">'+
+ '<label>YouTube</label><input id="setYouTube" value="'+safe(s.youtube)+'" placeholder="Link do YouTube">'+
+ '<label>WhatsApp suporte</label><input id="setWhatsApp" value="'+safe(s.whatsapp)+'" placeholder="Link do WhatsApp">'+
+ '<label>PIX Copia e Cola</label><input id="setPix" value="'+safe(s.pix)+'" placeholder="Código PIX">'+
+ '<label>Binance / USDT</label><input id="setBinance" value="'+safe(s.binance)+'" placeholder="Link Binance">'+
+ '<button onclick="saveOwnerSettings()">Salvar configurações</button>'+
+ '</section>';
+}
+
+function contaProHtml(){
+ const t = (typeof trialInfo==='function') ? trialInfo() : {days:3,hours:0,expired:false};
+ const ativo = (typeof premiumActive==='function') ? premiumActive() : false;
+ const packs = Array.isArray(state.packs) ? state.packs : [];
+ const entregues = packs.filter(p=>p&&p.status==='delivered').length;
+ const bonus = Number(state.inviteBonus || state.bonus || 0);
+ const indic = Number(state.invites || state.indicacoes || 0) || 0;
+ const status = ativo ? 'Premium ativo' : (t.expired ? 'Teste expirado' : 'Teste grátis');
+ const restante = ativo ? '31 dias' : (t.expired ? '0h' : (t.days+'d '+t.hours+'h'));
+ return '<section class="card accountPro"><h3>👤 Minha Conta Pro</h3>'+
+ '<div class="accountHeader"><div class="avatarPro">🚚</div><div><h3 style="margin:0">'+safe(userDisplayName())+'</h3><small>'+safe(userEmail())+'</small><br><span class="badgePremium">'+status+'</span></div></div>'+
+ '<div class="accountRows">'+
+ '<div class="accountRow"><span>Plano</span><b>R$ 30/mês</b></div>'+
+ '<div class="accountRow"><span>Tempo restante</span><b>'+restante+'</b></div>'+
+ '<div class="accountRow"><span>Bônus acumulado</span><b>'+bonus+'</b></div>'+
+ '<div class="accountRow"><span>Indicações</span><b>'+indic+'</b></div>'+
+ '<div class="accountRow"><span>Pacotes cadastrados</span><b>'+packs.length+'</b></div>'+
+ '<div class="accountRow"><span>Entregas concluídas</span><b>'+entregues+'</b></div>'+
+ '<div class="accountRow"><span>Pagamento</span><b>PIX / Binance</b></div>'+
+ '<div class="accountRow"><span>Versão</span><b>V12.4</b></div>'+
+ '</div>'+
+ '<div class="supportBox">Precisa de ajuda? Use o botão de suporte para falar pelo WhatsApp e enviar comprovante ou feedback.</div>'+
+ '<button onclick="window.open(&quot;https://wa.me/?text=Olá, preciso de suporte no Rota Certa Global Pro.&quot;,&quot;_blank&quot;)">Falar com suporte</button>'+
+ '</section>';
+}
+
+function betaPublicoHtml(){
+ const url = location.href.split('?')[0];
+ const texto = encodeURIComponent('Estou testando o Rota Certa Global Pro Beta. Link: '+url);
+ const feedback = encodeURIComponent('Olá, quero suporte do Rota Certa Global Pro: ');
+ return '<section class="card betaPanel"><span class="betaBadge">V12.4 SOCIAL</span><h3>🧪 Comece a entregar melhor</h3>'+
+ '<p>Teste grátis por 3 dias. Depois continue no Premium por R$ 30,00/mês.</p>'+
+ '<div class="testItem">✅ OCR inteligente para ler etiquetas.</div>'+
+ '<div class="testItem">✅ Organização automática da carga.</div>'+
+ '<div class="testItem">✅ Localizador rápido de pacotes.</div>'+
+ '<div class="testItem">✅ Rota inteligente no Google Maps.</div>'+
+ '<div class="testItem">✅ Copiloto para ajudar durante a entrega.</div>'+
+ '<div class="testItem">✅ Premium por apenas R$ 30,00/mês.</div>'+
+ '<div class="feedbackBtns">'+
+ '<button onclick="navigator.clipboard&&navigator.clipboard.writeText(location.href);alert(&quot;Link copiado para compartilhar.&quot;)">Copiar link do app</button>'+
+ '<button onclick="window.open(&quot;https://wa.me/?text='+texto+'&quot;,&quot;_blank&quot;)">Indicar no WhatsApp</button>'+
+ '</div>'+
+ '<button class="navbtn" onclick="window.open(&quot;https://wa.me/?text='+feedback+'&quot;,&quot;_blank&quot;)">Falar com suporte</button>'+
+ '<p class="muted">Mais organização, menos tempo procurando pacotes e mais produtividade na rota.</p>'+
+ '</section>';
+}
+
+function painelBetaHtml(){
+ const packs = Array.isArray(state.packs) ? state.packs : [];
+ const queue = Array.isArray(state.queue) ? state.queue : [];
+ const total = packs.length;
+ const entregues = packs.filter(p => p && p.status === 'delivered').length;
+ const pendentes = Math.max(0, total - entregues);
+ const processados = queue.filter(q => q && (q.status === 'revisar' || q.status === 'salvo')).length;
+ const revisar = queue.filter(q => q && Number(q.score || 0) > 0 && Number(q.score || 0) < 70).length;
+ const pct = total ? Math.round((entregues / total) * 100) : 0;
+ return '<section class="card"><h3>📊 Painel Beta</h3>'+
+ '<p class="muted">Resumo seguro para acompanhar os testes sem quebrar o aplicativo.</p>'+
+ '<div class="stats">'+
+ '<div><small>Pacotes</small><b>'+total+'</b></div>'+
+ '<div><small>Entregues</small><b>'+entregues+'</b></div>'+
+ '<div><small>Pendentes</small><b>'+pendentes+'</b></div>'+
+ '<div><small>Conclusão</small><b>'+pct+'%</b></div>'+
+ '</div>'+
+ '<div class="stats">'+
+ '<div><small>OCRs</small><b>'+processados+'</b></div>'+
+ '<div><small>Revisar</small><b>'+revisar+'</b></div>'+
+ '</div>'+
+ '</section>';
+}
+
+function mapaCargaHtml(){
+ const data=mapaCargaData();
+ const next=data.list[0]||null;
+ let slots='';
+ data.positions.forEach(pos=>{
+   const arr=data.buckets[pos]||[];
+   for(let i=0;i<4;i++){
+     const p=arr[i];
+     const isNext=next&&p&&p.id===next.id;
+     slots+='<div class="slot '+(isNext?'next ':'')+(!p?'empty':'')+'"><b>'+positionCode(pos,i)+'</b>'+
+       '<small>'+safe(pos)+'</small>'+
+       (p?'<small>📦 '+safe(p.code||'sem código')+'</small><small>'+safe(p.neighborhood||'sem bairro')+'</small>':'<small>vazio</small>')+
+       '</div>';
+   }
+ });
+ const nextText=next?('Próximo: '+safe(next.code||'sem código')+' • '+safe(next.position||autoPositionByIndex(0,data.list.length))+' • '+safe(next.address||'')):'Nenhum pacote pendente.';
+ return '<section class="card mapaCarga"><h3>🗺️ Mapa da carga</h3>'+
+ '<p class="muted">Visualize onde cada pacote deve ficar no veículo. Os primeiros ficam mais acessíveis.</p>'+
+ '<div class="cargoHint">'+nextText+'</div>'+
+ '<div class="vehicleGrid">'+slots+'</div>'+
+ '<div class="vehicleLegend">'+
+ '<div class="legendItem"><b>F</b> = Frente</div><div class="legendItem"><b>D</b> = Lado direito</div>'+
+ '<div class="legendItem"><b>E</b> = Lado esquerdo</div><div class="legendItem"><b>T</b> = Fundo/traseira</div>'+
+ '</div></section>';
+}
+
+function cargoHtml(){
+ const groups=cargoGroups();
+ const bairros=Object.keys(groups);
+ const total=bairros.reduce((s,b)=>s+groups[b].length,0);
+ const positions={Frente:0,'Lado direito':0,'Lado esquerdo':0,Fundo:0,Meio:0};
+ bairros.forEach(b=>groups[b].forEach(p=>positions[p.position||p._suggest||'Meio']=(positions[p.position||p._suggest||'Meio']||0)+1));
+ const resumo=Object.entries(positions).filter(([k,v])=>v).map(([k,v])=>'<div class="cargoBox"><b>'+safe(k)+'</b><div>'+v+' pacote(s)</div></div>').join('');
+ const bairrosHtml=bairros.map(b=>{
+   const arr=groups[b];
+   return '<div class="cargoBox"><b>'+safe(b)+' • '+arr.length+'</b><div class="cargoList">'+arr.slice(0,8).map(p=>'📦 '+safe(p.code||'sem código')+' — '+safe(p.position||p._suggest||'Meio')).join('<br>')+(arr.length>8?'<br>...':'')+'</div></div>';
+ }).join('');
+ return '<section class="card"><h3>🚚 Organização da carga</h3><p class="muted">Agrupamento automático dos pacotes pendentes por bairro e sugestão de posição no veículo.</p>'+
+ '<div class="cargoHint">Meta: carregar primeiro os pacotes do fundo e deixar mais acessíveis os primeiros bairros da rota.</div>'+
+ '<p><b>Pacotes pendentes:</b> '+total+' • <b>Bairros:</b> '+bairros.length+'</p>'+
+ '<div class="cargoGrid">'+(resumo||'<div class="cargoBox">Nenhum pacote pendente.</div>')+'</div>'+
+ '<h4>📍 Grupos por bairro</h4><div class="cargoGrid">'+(bairrosHtml||'<div class="cargoBox">Adicione pacotes para organizar.</div>')+'</div></section>';
+}
+
+function novidadesHtml(){
+ return '<section class="card newsbox"><span class="badge">V12.4 SOCIAL</span><h3>🚀 Novidades da versão</h3>'+
+ '<p class="muted">Esta versão marca a virada do Rota Certa Global para uma arquitetura profissional.</p>'+
+ '<ul>'+
+ '<li>Identidade visual comercial atualizada.</li>'+
+ '<li>OCR com zoom: leitura da foto inteira, recorte central e segunda tentativa.</li>'+
+ '<li>Rota inteligente, carga organizada e plano Premium.</li>'+
+ '<li>Fluxo comercial definido: 3 dias grátis, 162 pacotes/dia, oferta de lançamento e indicação.</li>'+
+ '<li>Funções atuais mantidas: Firebase, convites, Premium, múltiplas fotos, OCR e copiloto.</li>'+
+ '</ul></section>';
+}
+
+function renderPacks(){
+ let q=(state.query||'').toLowerCase();
+ let packs=state.packs.filter(p=>[p.code,p.address,p.neighborhood,p.position,p.status].join(' ').toLowerCase().includes(q));
+ let ocrHtml='';
+ if(state.ocr){
+  ocrHtml='<div class="routeBox"><b>Texto lido</b><br><small>'+safe((state.ocr||'').slice(0,350))+'</small>'+
+  '<p><b>Código:</b> '+safe(state.ocrCode||'não identificado')+'</p>'+
+  '<p><b>Endereço:</b> '+safe(state.ocrAddress||'não identificado')+'</p>'+
+  '<p><b>Destinatário:</b> '+safe(state.ocrRecipient||'não identificado')+'</p><p><b>Bairro:</b> '+safe(state.ocrNeighborhood||'não identificado')+'</p><p><b>Número:</b> '+safe(state.ocrNumber||'não identificado')+'</p><p><b>CEP:</b> '+safe(state.ocrCep||'não identificado')+'</p><p><b>Cidade/UF:</b> '+safe((state.ocrCity||'não identificado')+' '+(state.ocrUf||''))+'</p><p><b>Empresa:</b> '+safe(state.ocrCompany||'não identificada')+'</p><div class="score"><b style="width:'+Number(state.ocrScore||0)+'%"></b></div><p class="hint">'+qualityHint()+'</p>'+
+  '<button class="primary" onclick="useOCR()">Usar dados lidos</button>'+
+  '<button class="secondary" onclick="clearOCR()">Limpar OCR</button></div>';
+ }
+ let items=packs.map(p=>{
+  let delivered=p.status==='delivered';
+  return '<article class="item '+(!delivered?'next':'')+'">'+
+  (p.photo?'<img class="photo" onclick="openPhoto(&quot;'+p.photo+'&quot;)" src="'+p.photo+'">':'')+
+  '<div><b>'+safe(p.code)+'</b><p>'+safe(p.address||'Sem endereço')+'</p><small>'+safe(p.neighborhood||'Sem bairro')+' • '+safe(p.position||'Sem posição')+'</small>'+
+  '<label class="file">Foto<input type="file" accept="image/*" onchange="packPhoto(&quot;'+p.id+'&quot;,this)"></label></div>'+
+  '<div><button class="navbtn" onclick="navigateAddress(&quot;'+safe(p.address||'')+'&quot;)">Navegar</button><button class="'+(delivered?'done':'small')+'" onclick="update(&quot;'+p.id+'&quot;,{status:&quot;'+(delivered?'pending':'delivered')+'&quot;})">'+(delivered?'Entregue':'Marcar')+'</button>'+
+  '<button class="danger" onclick="del(&quot;'+p.id+'&quot;)">X</button></div></article>';
+ }).join('');
+ if(!items)items='<p class="muted">Nenhum pacote.</p>';
+ return '<section class="card ocrbox"><h3>📷 Ler etiqueta / OCR</h3><p class="muted">Tire uma foto clara da etiqueta. O app tenta preencher código, endereço e bairro.</p>'+
+ '<label class="file">Abrir câmera/galeria para ler etiqueta<input type="file" accept="image/*" capture="environment" onchange="ocrPackage(this)"></label><p id="ocrStatus" class="muted"></p>'+ocrHtml+'</section>'+
+ '<section class="card review"><h3>✅ Confirmar dados do pacote</h3><p class="muted">Confira os campos antes de salvar. Corrija manualmente se precisar.</p><form onsubmit="addPack(event)">'+
+ '<input name="code" placeholder="Código: ABC-123" value="'+safe(state.formCode||state.ocrCode||'')+'" oninput="state.formCode=this.value;save()">'+
+ '<input name="address" placeholder="Endereço" value="'+safe(state.formAddress||state.ocrAddress||'')+'" oninput="state.formAddress=this.value;save()">'+
+ '<input name="number" placeholder="Número/complemento" value="'+safe(state.formNumber||state.ocrNumber||'')+'" oninput="state.formNumber=this.value;save()">'+
+ '<input name="neighborhood" placeholder="Bairro / região" value="'+safe(state.formNeighborhood||state.ocrNeighborhood||'')+'" oninput="state.formNeighborhood=this.value;save()">'+
+ '<select name="position"><option value="">Posição</option><option>Frente</option><option>Meio</option><option>Fundo</option><option>Lado esquerdo</option><option>Lado direito</option></select><button class="primary">Adicionar pacote</button></form>'+
+ '<div class="row"><h3>🔎 Buscar</h3><button class="small" onclick="maps()">Maps</button></div><input placeholder="Buscar" value="'+safe(state.query||'')+'" oninput="state.query=this.value;save();render()"><div>'+items+'</div></section>';
+}
+function renderCargo(){let marked=state.packs.filter(p=>p.x!==null&&p.y!==null),un=state.packs.filter(p=>p.x===null||p.y===null);return `<section class="card"><h3>📸 Mapa da carga</h3><label class="file">Foto da carga<input type="file" accept="image/*" onchange="cargoFile(this)"></label>${state.cargo?`<div class="cargo" onclick="markCargo(event)"><img src="${state.cargo}">${marked.map(p=>`<button class="pin" style="left:${p.x}%;top:${p.y}%">${safe((p.code||'').slice(0,4))}</button>`).join('')}${un[0]?`<button class="mark">Toque para marcar: ${safe(un[0].code)}</button>`:''}</div>`:'<p class="muted">Adicione foto da carga.</p>'}</section>`}
+function renderRoute(){
+ let pending=sortForRoute(state.packs.filter(p=>p.status!=='delivered'));
+ let groups={};
+ pending.forEach(p=>{let k=p.neighborhood||'Sem bairro';(groups[k]=groups[k]||[]).push(p)});
+ let keys=Object.keys(groups);
+ return '<section class="card"><h3>🗺️ Melhor rota por bairro</h3><p class="muted">Primeiro entregue por bairros/regiões. Depois use o botão Maps para abrir a sequência.</p><button class="primary" onclick="mapsAll()">Abrir todos os pendentes no Google Maps</button>'+
+ (keys.map(k=>'<div class="routeBox"><div class="row"><b>'+safe(k)+'</b><button class="small" onclick="mapsNeighborhood(&quot;'+safe(k)+'&quot;)">Maps bairro</button></div><p>'+groups[k].length+' pacote(s)</p>'+
+ groups[k].map((p,i)=>'<small>'+(i+1)+'. '+safe(p.code)+' — '+safe(p.address||'sem endereço')+'</small><br>').join('')+'</div>').join('')||'<p class="muted">Sem pacotes pendentes.</p>')+'</section>';
+}
+function renderProfile(){return `<section class="card"><h3>👤 Perfil</h3>${state.user.photoURL?`<img class="avatar" src="${state.user.photoURL}">`:''}<p><b>Email:</b> ${safe(state.user.email)}</p><p><b>Login:</b> ${safe(state.user.login)}</p><p><b>Código:</b> ${safe(state.user.refCode)}</p><span class="badge">Plano: ${safe(state.user.plan)}</span></section><section class="card"><h3>🧾 Backup</h3><button class="secondary" onclick="exportData()">Exportar backup</button><button class="danger" onclick="clearLocal()">Limpar dados locais</button></section><section class="card"><h3>📋 Registro</h3>${state.syncLog.map(x=>`<small>• ${safe(x)}</small><br>`).join('')||'<p class="muted">Sem registros.</p>'}</section>`}
+Object.assign(window,{enterGoogle,enterAnon,exit,renew,addBonus,addPack,update,del,maps,packPhoto,cargoFile,markCargo,exportData,clearLocal,setTab,shareInvite,copyCode,manualInvite,ocrPackage,useOCR,clearOCR,openPhoto,closePhoto,navigateAddress,mapsAll,mapsNeighborhood,createFromOCR,voiceSummary,startVoice,handleVoiceCommand,markNextDelivered,addLoadPhotos,processQueueItem,processAllQueue,pauseBatch,resumeBatch,cancelBatch,saveQueueItem,saveAllReviewed,updateQueue,removeQueueItem,clearQueue,novidadesHtml,cargoHtml,finderHtml,setFinder,mapaCargaHtml,painelBetaHtml,betaPublicoHtml,contaProHtml,redesSociaisHtml,painelConfigHtml,saveOwnerSettings,openSocial,minhaContaHtml,pagamentoManualHtml,copiarPix,marcarJaPaguei,cargaIAHtml,mapaInteligenteCargaHtml,openPkgOnMap,marcarPacoteEntregue,organizarCargaIA,rotaInteligenteHtml,mapaInteligenteCargaHtml,openPkgOnMap,marcarPacoteEntregue,mapaInteligenteCargaHtml,openPkgOnMap,marcarPacoteEntregue,abrirRotaMaps,abrirProximaEntrega});
+render();
+</script>
 </body>
 </html>
